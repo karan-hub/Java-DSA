@@ -4,9 +4,8 @@ public class MinMax {
 
     public static void main(String[] args) {
         int[] arr = { 12, 2, 45, 67, 798, -2, 34, 76 };
-        System.out.print(String.format("min value in array ", min(arr)));
-        System.out.printf("min value in array", max(arr));
-
+        System.out.printf("Min value in array: %d\n", min(arr));
+        System.out.printf("Max value in array: %d\n", max(arr));
     }
 
     static int min(int[] arr) {
