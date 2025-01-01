@@ -1,0 +1,31 @@
+package Linear_Search;
+
+public class MinMax {
+
+    public static void main(String[] args) {
+        int[] arr = { 12, 2, 45, 67, 798, -2, 34, 76 };
+        System.out.print(String.format("min value in array ", min(arr)));
+        System.out.printf("min value in array", max(arr));
+
+    }
+
+    static int min(int[] arr) {
+        int minVal = arr[0];
+        for (int i : arr) {
+            if (i < minVal) {
+                minVal = i;
+            }
+        }
+        return minVal;
+    }
+
+    static int max(int[] arr) {
+        int maxVal = arr[0];
+        for (int i : arr) {
+            if (i > maxVal) {
+                maxVal = i;
+            }
+        }
+        return maxVal;
+    }
+}
