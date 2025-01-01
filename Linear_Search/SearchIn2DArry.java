@@ -14,6 +14,7 @@ public class SearchIn2DArry {
         }
         int[] resultArray = Search(arr, 75);
         System.out.println(Arrays.toString(resultArray));
+        System.out.println("the max is " + max(arr));
     }
 
     static boolean SearchIn2D(int[][] arr, int i) {
@@ -47,4 +48,18 @@ public class SearchIn2DArry {
 
     }
 
+    static int max(int[][] arr) {
+
+        int max = Integer.MIN_VALUE;
+
+        for (int[] row : arr) {
+            for (int is : row) {
+                if (is > max) {
+                    max = is;
+                }
+            }
+        }
+        return max;
+
+    }
 }
