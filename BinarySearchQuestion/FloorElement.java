@@ -8,9 +8,9 @@ public class FloorElement {
         int result = findFloorElement(arr, target);
 
         if (result != -1) {
-            System.out.println("The ceiling of " + target + " is: " + result);
+            System.out.println("The floor of " + target + " is: " + result);
         } else {
-            System.out.println("No ceiling element found.");
+            System.out.println("No floor element found.");
         }
     }
 
@@ -36,6 +36,6 @@ public class FloorElement {
 
         }
 
-        return arr[end - 1];
+        return arr[end ];
     }
 }

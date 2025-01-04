@@ -19,7 +19,6 @@ public class CelingElement {
         int Start = 0;
         int end = arr.length - 1;
         int mid = 0;
-
         if (target > arr[end]) {
             return -1;
         }
