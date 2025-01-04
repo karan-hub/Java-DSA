@@ -3,7 +3,6 @@ package BinarySearchQuestion;
 public class SmallestLetterGreaterThanTarget {
 
     public static void main(String[] args) {
-        char[] letters = { 'c', 'f', 'j' };
 
         char[] letters2 = { 'x', 'x', 'y', 'y' };
         char target = 'x';
