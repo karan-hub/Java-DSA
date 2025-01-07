@@ -3,7 +3,7 @@ package BasicMaths;
 public class CountDigits {
     public static void main(String[] args) {
         int number = 12;
-        int result = evenlyDivides(number);
+        int result = countDividingDigits(number);
         System.out.println("Number of digits that evenly divide " + number + " is: " + result);
     }
 
@@ -23,4 +23,19 @@ public class CountDigits {
         return count;
         // code here
     }
+
+    public  static int countDividingDigits(int n) {
+        int count = 0;
+    
+         for (char digitChar : Integer.toString(n).toCharArray()) {
+            int digit = digitChar - '0';  
+            
+             if (digit != 0 && n % digit == 0) {
+                count++;
+            }
+        }
+    
+        return count;
+    }
+    
 }
