@@ -9,7 +9,7 @@ public class PalindromeNumber {
     }
 
     public boolean isPalindrome(int x) {
-    
+        int original = x;
         int reverserd = 0;
         while(x > 0){
             int digit = x % 10;
@@ -17,7 +17,7 @@ public class PalindromeNumber {
             reverserd = reverserd *10 + digit;
             
         }
-        if (reverserd == x) {
+        if (reverserd == original) {
             return true;
         }
         return false;
