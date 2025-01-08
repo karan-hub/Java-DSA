@@ -7,20 +7,20 @@ public class Reverce {
         int reversedNumber = rev.reverse(number);
         System.out.println("Reversed number: " + reversedNumber);
     }
+
     public int reverse(int x) {
-        int result =0;
+        int result = 0;
         // int sign = x < 0 ? -1:1 ;
-         int sign = x < 0 ? -1 : 1;
-z        while(x !=0){
+        int sign = x < 0 ? -1 : 1;
+        while (x != 0) {
 
-            int remender = x % 10 ;
-            x /=10 ;
+            int remender = x % 10;
+            x /= 10;
 
-
-            result = result *10 + remender ;
+            result = result * 10 + remender;
 
         }
-        return result * sign ;
+        return result * sign;
 
     }
 }
