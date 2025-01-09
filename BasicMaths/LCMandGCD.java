@@ -10,6 +10,9 @@ public class LCMandGCD {
 
         int gcdOptimal = OptimalApproch(a, b);
         System.out.println("GCD using Optimal Approach: " + gcdOptimal);
+        int[] lcmAndGcd = lcmAndGcd(a, b);
+        System.out.println("LCM: " + lcmAndGcd[0]);
+        System.out.println("GCD: " + lcmAndGcd[1]);
 
     }
 
@@ -39,6 +42,14 @@ public class LCMandGCD {
 
         }
         return 0;
+    }
+
+    public static int[] lcmAndGcd(int a, int b) {
+        int GCD = OptimalApproch(a, b);
+
+        int result = (a * b) / GCD;
+        return new int[]{result, GCD};
+
     }
 
 }
