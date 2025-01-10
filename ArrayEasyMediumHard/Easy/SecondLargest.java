@@ -1,20 +1,20 @@
 package ArrayEasyMediumHard.Easy;
 
 import java.util.Arrays;
+
 public class SecondLargest {
     public static void main(String[] args) {
-        int[] arr = {10, 20, 4, 45, 99};
-        int result = BatterApproach(arr);
+        int[] arr = { 10, 20, 4, 45, 99 };
+        int result = Optimal(arr);
         System.out.println("The second largest element is: " + result);
-        
+
     }
 
     public static int BruteForce(int[] arr) {
         // Code Here
         Arrays.sort(arr);
-        return arr[arr.length-2];
+        return arr[arr.length - 2];
     }
-
 
     public static int BruteForce2(int[] arr) {
         // Code Here
@@ -28,7 +28,7 @@ public class SecondLargest {
         for (int i : arr) {
             if (i < max) {
                 secondmax = i;
-                
+
             }
         }
         return secondmax;
@@ -46,7 +46,35 @@ public class SecondLargest {
                 secondmax = Math.max(secondmax, i);
             }
         }
-         
+
         return secondmax;
+    }
+
+    public static int[] Optimal(int[] arr) {
+        // Code Here
+        int max = Integer.MIN_VALUE;
+        int secondmax = Integer.MIN_VALUE;
+
+        int smallest = Integer.MAX_VALUE;
+        int secondsmallest = Integer.MAX_VALUE;
+
+        for (int i : arr) {
+            if ( i > max) {
+                secondmax = max;
+                max = i;
+                 
+                }else if (i > secondmax) {
+                    secondmax = i;
+                
+            }
+
+            if(i<smallest){
+                secondsmallest = smallest;
+                smallest=i;
+            }else if(i<secondsmallest){
+                secondsmallest = i;
+            }
+        }
+        return  new int[]{secondmax, secondsmallest};
     }
 }
