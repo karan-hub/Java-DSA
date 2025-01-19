@@ -5,8 +5,12 @@ class FindMissing {
     public static void main(String[] args) {
         int[] arr = { 1, 2, 4, 5, 6 };
 
-        int missingNumber = missing(arr);
+        int missingNumber = missingBrutForce1(arr);
         System.out.println("The missing number is: " + missingNumber);
+
+
+        int missingNumberSummation = SummationApproach(arr);
+        System.out.println("The missing number using summation approach is: " + missingNumberSummation);
     }
 
     // brut force
@@ -29,4 +33,18 @@ class FindMissing {
         return -1;
     }
 
+    // Summation Approach:
+
+    public static int SummationApproach(int arr[]) {
+
+        int N = arr[arr.length - 1];
+
+        int s1 = (N * (N + 1)) / 2;
+        int s2 = 0;
+        for (int i : arr) {
+            s2 += i;
+        }
+
+        return s1 - s2;
+    }
 }
