@@ -2,9 +2,9 @@ package ArrayEasyMediumHard.Easy;
 
 public class SumOfSubArray {
     public static void main(String[] args) {
-        int[] arr = {2,3,5};
+        int[] arr = { 2, 3, 5 };
         int targetSum = 5;
-        int result = usingBrutforce1(arr, targetSum);
+        int result = usingBrutforce2(arr, targetSum);
         System.out.println("Length of subarray with target sum: " + result);
     }
     // using two pointers
@@ -36,9 +36,11 @@ public class SumOfSubArray {
         int len = 0;
         for (int i = 0; i < num.length; i++) {
             for (int j = i; j < num.length; j++) {
-                int sum =SumSrartToEnd(num, i, j);
+                int sum = SumSrartToEnd(num, i, j);
                 if (targetSum == sum) {
-                    len = Math.max(len, j-i + 1);
+                    len = Math.max(len, j - i + 1);
+                } else if (sum > targetSum) {
+                    break;
                 }
 
             }
@@ -59,5 +61,20 @@ public class SumOfSubArray {
             sum = sum + num[i];
         }
         return sum;
+    }
+
+    public static int usingBrutforce2(int[] nums, int targetSum) {
+        int len = 0;
+        for (int i = 0; i < nums.length; i++) {
+            int sum = 0;
+            for (int j = i; j < nums.length; j++) {
+                sum += nums[j];
+
+                if (targetSum == sum) {
+                    len = Math.max(len, j - i + 1);
+                }
+            }
+        }
+        return len;
     }
 }
