@@ -2,8 +2,8 @@ package ArrayEasyMediumHard.Medium;
 
 public class Sort01s2s {
     public static void main(String[] args) {
-        int[] nums = {2, 0, 1, 2, 0, 1, 2, 0, 1};
-        int[] sortedNums = BatterApproch(nums);
+        int[] nums = { 2, 0, 1, 2, 0, 1, 2, 0, 1 };
+        int[] sortedNums = DuchnatinalFlag(nums);
         for (int num : sortedNums) {
             System.out.print(num + " ");
         }
@@ -50,19 +50,51 @@ public class Sort01s2s {
         }
 
         for (int j = 0; j < zero; j++) {
-            nums[j]=0;
+            nums[j] = 0;
 
         }
         for (int j = zero; j < zero + one; j++) {
-            nums[j]=1;
+            nums[j] = 1;
 
         }
         for (int j = zero + one; j < nums.length; j++) {
-            nums[j]=2;
+            nums[j] = 2;
 
         }
 
         return nums;
+
+    }
+
+    public static int[] DuchnatinalFlag(int[] nums) {
+
+        int low = 0;
+        int mid = 0;
+        int high = nums.length - 1;
+
+        while (mid <= high) {
+
+            if (nums[mid] == 0) {
+                swap(nums, low, mid);
+                mid++;
+                low++;
+            } else if (nums[mid] == 1) {
+                mid++;
+            } else {
+                swap(nums, mid, high);
+                high--;
+            }
+
+        }
+
+        return nums;
+
+    }
+
+    public static void swap(int[] arr, int start, int end) {
+        int temp = arr[end];
+        arr[end] = arr[start];
+        arr[start] = temp;
 
     }
 }
