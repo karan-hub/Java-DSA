@@ -20,6 +20,7 @@ public class SumOfSubArray {
 
             while (currenSum > targetSum) {
                 currenSum -= arr[Start];
+                
                 Start++;
             }
 
