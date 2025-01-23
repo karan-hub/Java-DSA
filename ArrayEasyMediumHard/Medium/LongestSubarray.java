@@ -2,8 +2,8 @@ package ArrayEasyMediumHard.Medium;
 
 public class LongestSubarray {
     public static void main(String[] args) {
-        int[] arr = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
-        int result = BatterApproch(arr);
+        int[] arr = {  -7, -8, -16, -4, -8, -5, -7, -11, -10, -12, -4, -6, -4, -16, -10 };
+        long result = OptimalApproch(arr);
         System.out.println("The sum of the longest subarray is: " + result);
         // // int y = usingwhileloop(arr);
         // System.out.println(y);
@@ -43,23 +43,20 @@ public class LongestSubarray {
                 sum = 0;
             }
         }
-        return curretnSum;
+        return Math.max(sum, curretnSum);
     }
 
-    public static int BatterApproch(int[] arr) {
-        int max = Integer.MIN_VALUE;
+    public static long betterApproach(int[] arr) {
+        long max = Long.MIN_VALUE;
         for (int start = 0; start < arr.length; start++) {
             int sum = 0;
-            // curretnSum += arr[start];
             for (int end = start; end < arr.length; end++) {
                 sum += arr[end];
-
                 max = Math.max(max, sum);
             }
-
         }
         return max;
-
     }
+    
 
 }
