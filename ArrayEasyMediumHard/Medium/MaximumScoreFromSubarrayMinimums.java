@@ -1,6 +1,5 @@
 package ArrayEasyMediumHard.Medium;
-
-import java.util.Arrays;
+ 
 
 public class MaximumScoreFromSubarrayMinimums {
     public static void main(String[] args) {
