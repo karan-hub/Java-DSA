@@ -12,13 +12,14 @@ public class StockBuyAndSell {
         int maxProfit = 0, buyStock = prices[0];
         for (int price : prices) {
             if (price > buyStock) {
+                
                 maxProfit = Math.max(maxProfit, price - buyStock);
             }
 
             buyStock = Math.min(buyStock, price);
         }
  
-        
+
         return maxProfit;
 
     }
