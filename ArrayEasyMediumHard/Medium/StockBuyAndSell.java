@@ -17,7 +17,8 @@ public class StockBuyAndSell {
 
             buyStock = Math.min(buyStock, price);
         }
-
+ 
+        
         return maxProfit;
 
     }
