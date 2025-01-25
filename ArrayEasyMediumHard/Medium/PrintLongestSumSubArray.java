@@ -4,7 +4,7 @@ package ArrayEasyMediumHard.Medium;
 public class PrintLongestSumSubArray {
 
     public static void main(String[] args) {
-        int[] nums = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
+        int[] nums = { 4, 3, 1, 5, 6 };
         int[] result = SunPrint(nums);
         System.out.println("The start index of the longest subarray is: " + result[0]);
         System.out.println("The end index of the longest subarray is: " + result[1]);

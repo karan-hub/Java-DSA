@@ -2,7 +2,7 @@ package ArrayEasyMediumHard.Medium;
 
 public class Sort01s2s {
     public static void main(String[] args) {
-        int[] nums = { 2, 0, 1, 2, 0, 1, 2, 0, 1 };
+        int[] nums = { };
         int[] sortedNums = DuchnatinalFlag(nums);
         for (int num : sortedNums) {
             System.out.print(num + " ");
