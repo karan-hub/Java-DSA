@@ -1,6 +1,6 @@
 package ArrayEasyMediumHard.Medium;
 
-import java.util.Arrays;
+ 
 
 public class NextPermutation {
 
