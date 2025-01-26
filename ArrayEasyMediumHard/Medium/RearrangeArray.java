@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class RearrangeArray {
 
     public static void main(String[] args) {
-        int[] nums = {3,1,-2,-5,2,-4};
+        int[] nums = { 3, 1, -2, -5, 2, -4 };
         int[] rearrangedArray = OptimalApproch(nums);
         System.out.println(Arrays.toString(rearrangedArray));
 
@@ -64,6 +64,47 @@ public class RearrangeArray {
         }
 
         return result;
+
+    }
+
+    public static int[] Approch2(int[] nums) {
+        ArrayList<Integer> positiveList = new ArrayList<>();
+        ArrayList<Integer> negitiveList = new ArrayList<>();
+        int n = nums.length;
+
+        for (int num : nums) {
+            if (num < 0) {
+                negitiveList.add(num);
+            } else {
+                positiveList.add(num);
+            }
+        }
+
+        if (positiveList.size() > negitiveList.size()) {
+
+            for (int i = 0; i < negitiveList.size(); i++) {
+                nums[i * 2] = positiveList.get(i);
+                nums[i * 2 + 1] = negitiveList.get(i);
+            }
+            int index = negitiveList.size() * 2;
+
+            for (int i = negitiveList.size(); i < positiveList.size(); i++) {
+                nums[index] = positiveList.get(i);
+                index++;
+            }
+        } else {
+
+            for (int i = 0; i < positiveList.size(); i++) {
+                nums[i * 2] = positiveList.get(i);
+                nums[i * 2 + 1] = negitiveList.get(i);
+            }
+            int index = positiveList.size() * 2;
+            for (int i = positiveList.size(); i < negitiveList.size(); i++) {
+                nums[index] = negitiveList.get(i);
+                index++;
+            }
+        }
+        return nums;
 
     }
 }
