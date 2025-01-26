@@ -70,8 +70,7 @@ public class RearrangeArray {
     public static int[] Approch2(int[] nums) {
         ArrayList<Integer> positiveList = new ArrayList<>();
         ArrayList<Integer> negitiveList = new ArrayList<>();
-        int n = nums.length;
-
+         
         for (int num : nums) {
             if (num < 0) {
                 negitiveList.add(num);
