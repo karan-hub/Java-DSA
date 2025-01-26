@@ -6,8 +6,8 @@ import java.util.Arrays;
 public class RearrangeArray {
 
     public static void main(String[] args) {
-        int[] nums = { 3, 1, -2, -5, 2, -4 };
-        int[] rearrangedArray = OptimalApproch(nums);
+        int[] nums = { 3, 1, -2, -5, 2, -4 ,23,54,65,78,6 };
+        int[] rearrangedArray = Approch2(nums);
         System.out.println(Arrays.toString(rearrangedArray));
 
     }
