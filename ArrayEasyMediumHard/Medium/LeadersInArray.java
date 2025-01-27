@@ -31,8 +31,8 @@ public class LeadersInArray {
 
     }
 
-    public static List<Integer> OptimalApproch(int[] nums) {
-        List<Integer> resuList = new ArrayList<>();
+    public static ArrayList<Integer> OptimalApproch(int[] nums) {
+        ArrayList<Integer> resuList = new ArrayList<>();
         int maxi = Integer.MIN_VALUE;
 
         for (int index = nums.length - 1; index >= 0; index--) {
