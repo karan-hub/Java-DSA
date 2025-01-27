@@ -1,15 +1,17 @@
 package ArrayEasyMediumHard.Medium;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-import Linear_Search.linerStrSearch;
+import question.reverceNum;
 
 public class LeadersInArray {
 
     public static void main(String[] args) {
-        int[] nums = { 1, 2, 3, 2 };
+        int[] nums = { 1, 2, 2, 1 };
         List<Integer> leaders = OptimalApproch(nums);
+        // int[] leaders = OptimalApproch(nums);
         System.out.println(leaders);
     }
 
@@ -43,9 +45,24 @@ public class LeadersInArray {
             }
 
         }
+        reverse(resuList);
 
         return resuList;
 
+    }
+
+    public static void reverse(List<Integer> nums) {
+        int i = 0;
+        int j = nums.size() - 1;
+        while (i < j) {
+            // Swap elements at indices i and j
+            int temp = nums.get(j);
+            nums.set(j, nums.get(i));
+            nums.set(i, temp);
+
+            i++;
+            j--;
+        }
     }
 
 }
