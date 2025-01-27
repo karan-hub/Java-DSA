@@ -8,8 +8,8 @@ import Linear_Search.linerStrSearch;
 public class LeadersInArray {
 
     public static void main(String[] args) {
-        int[] nums = { 16, 17, 4, 3, 5, 2 };
-        List<Integer> leaders = Leaders(nums);
+        int[] nums = { 1, 2, 3, 2 };
+        List<Integer> leaders = OptimalApproch(nums);
         System.out.println(leaders);
     }
 
@@ -21,7 +21,6 @@ public class LeadersInArray {
                 if (nums[num] > nums[learder]) {
                     add = false;
                     break;
-
                 }
             }
             if (add) {
@@ -32,4 +31,21 @@ public class LeadersInArray {
         return resuList;
 
     }
+
+    public static List<Integer> OptimalApproch(int[] nums) {
+        List<Integer> resuList = new ArrayList<>();
+        int maxi = Integer.MIN_VALUE;
+
+        for (int index = nums.length - 1; index >= 0; index--) {
+            if (nums[index] > maxi) {
+                maxi = nums[index];
+                resuList.add(maxi);
+            }
+
+        }
+
+        return resuList;
+
+    }
+
 }
