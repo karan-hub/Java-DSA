@@ -1,10 +1,7 @@
 package ArrayEasyMediumHard.Medium;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-
-import question.reverceNum;
 
 public class LeadersInArray {
 
