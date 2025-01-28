@@ -2,7 +2,6 @@ package ArrayEasyMediumHard.Medium;
 
 import java.util.Arrays;
 
- 
 public class SetMatrixZeros {
 
     public static void main(String[] args) {
@@ -65,6 +64,7 @@ public class SetMatrixZeros {
         }
     }
 
+    // O(n^2)
     public static int[][] batterApproch(int[][] nums) {
         int[] row = new int[nums.length];
         int[] col = new int[nums[1].length];

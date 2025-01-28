@@ -1,0 +1,119 @@
+[33m617c756[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m Remove unused import statement in SetMatrixZeros class
+[33m7af9a6c[m Add batterApproch method to SetMatrixZeros class for optimized matrix zeroing
+[33m25de150[m Add SetMatrixZeros class with brute force approach to set matrix zeros
+[33m0ad6d44[m Add batterApproch method to LongestConsecutiveSequence class for finding longest consecutive sequence
+[33m3746e29[m Refactor OptimalApproch method to use ArrayList and add LongestConsecutiveSequence class for finding longest consecutive sequence
+[33md05ef87[m Remove unused import statement in LeadersInArray class
+[33mb60a01b[m Add reverse method to LeadersInArray class and update main method for testing
+[33m4abc3f5[m Refactor LeadersInArray class to use OptimalApproch method for finding leaders and update test case
+[33m8d60de1[m Add LeadersInArray class to identify leader elements in an array
+[33m96025f2[m Remove unused import statement in NextPermutation class
+[33mdcfea50[m Update README.md to improve formatting and readability
+[33m2fe1699[m Add NextPermutation class to implement next permutation algorithm for integer arrays
+[33m6c06f83[m Refactor Approch2 method in RearrangeArray to remove unnecessary variable declaration
+[33m36ea209[m Update RearrangeArray to include additional test cases and use second approach for rearrangement
+[33m3d2fbb2[m Add second approach to rearrange positive and negative numbers in an array
+[33me406c5c[m Add RearrangeArray class to rearrange positive and negative numbers in an array
+[33mb7e11dd[m Remove redundant learning document for Java with DSA
+[33m65a1b03[m Remove redundant learning document for Java with DSA
+[33m5583fab[m README.md
+[33m22002c7[m Remove unnecessary div and whitespace in learning document for cleaner presentation
+[33me874968[m Enhance formatting in learning document; center-align title and wrap introduction in a div for better presentation
+[33mc9b1a55[m Update
+[33md9506bd[m Update learning progress document for Java with DSA; enhance introduction with a friendly greeting and emojis
+[33m55093ed[m Add learning progress document for Java with DSA
+[33m4f9adec[m Fix formatting in StockBuyAndSell class; remove unnecessary whitespace for cleaner code
+[33mdbbe6e7[m Fix formatting in StockBuyAndSell class; remove unnecessary whitespace for cleaner code
+[33mf7dea22[m Remove unnecessary whitespace in StockBuyAndSell class for cleaner code
+[33m85e1039[m Add StockBuyAndSell class to calculate maximum profit from stock prices
+[33m7c406c8[m Refactor MaximumScoreFromSubarrayMinimums class for improved readability and maintainability; adjust variable formatting and remove commented code
+[33m7d76d67[m Add MaximumScoreFromSubarrayMinimums class to calculate maximum score from subarray minimums; remove README file
+[33me56b861[m Revise README to enhance structure and clarity; add sections on learning approach and progress tracking
+[33madc1acc[m Update example inputs in PrintLongestSumSubArray and Sort01s2s classes; add README file for project documentation
+[33mb99ad2e[m Remove unused import statement from UnionOfSorted class
+[33m1d881d8[m Add PrintLongestSumSubArray class to find and print the longest sum subarray
+[33m4b363a6[m Update LongestSubarray class to use OptimalApproch method and fix return type in betterApproach method
+[33m15e018b[m Update LongestSubarray class to use BatterApproch method for calculating the sum of the longest subarray
+[33m6ff9169[m Add OptimalApproch method to LongestSubarray class for calculating the sum of the longest subarray
+[33m7385b7a[m Add LongestSubarray class to calculate the sum of the longest subarray and update SumOfSubArray to fix currentSum calculation
+[33m3f88641[m Add BrutForce method to MejorityElemt class for finding the majority element using brute force approach
+[33m4e8ae0d[m Add BatterApproch method to MejorityElemt class for finding the majority element using sorting
+[33m0d59c9d[m Add MejorityElemt class to find the majority element in an array using Boyer-Moore Voting Algorithm
+[33mb682bca[m Refactor Sort01s2s class to rename sorting method to DuchnatinalFlag and implement Dutch National Flag algorithm
+[33m713b51e[m Add BatterApproch method to Sort01s2s class for sorting an array of 0s, 1s, and 2s
+[33ma1672a7[m Add Sort01s2s class to implement a method for sorting three numbers
+[33mdbf44d4[m Refactor TwosSumProblem class to implement two-pointer approach and add saveIndex method for index tracking
+[33m06a6a85[m Refactor TwosSumProblem class to add target sum parameter and update main method for testing
+[33mb0947bf[m Add TwosSumProblem class to implement a solution for the two-sum problem
+[33m4d50bf9[m Refactor SumOfSubArray class to improve readability and add usingBrutforce2 method for subarray length calculation
+[33m30010ee[m Add SumOfSubArray class to calculate the length of subarrays with a given target sum
+[33m86ee101[m Add Findappearsonce class to identify the element that appears only once in an array
+[33mdb5fd8a[m Add CountConsecutiveOne class to calculate maximum consecutive ones in an array
+[33m76b84b8[m Add SummationApproach method to FindMissing class for finding the missing number using summation
+[33m4d67511[m Refactor FindMissing class to improve readability and rename missing method to missingBrutForce1
+[33m1a2f18a[m Add FindMissing class to identify the missing number in a given array
+[33m1fd9c65[m Implement two-pointer method for union of two sorted arrays in UnionOfSorted class
+[33mcec35aa[m Add UnionOfSorted class to compute the union of two sorted arrays and return a sorted list
+[33m3e6a2fd[m Add SortedArraySearch and UnionOfSorted classes for searching and union operations on sorted arrays
+[33m89b57dd[m Add MoveZeroes class to move all zeros in an array to the end while maintaining order
+[33m9e182dd[m Add RotateArray class with brute force and optimal methods for rotating an array
+[33mcf6234f[m Refactor LeftArraybyOne class to replace brute force method with an optimal solution for rotating an array left by one position
+[33md32c84c[m Add LeftArraybyOne class to rotate an array left by one position using brute force method
+[33ma04badb[m Refactor RemoveDuplicates class to implement two-pointer technique for improved efficiency
+[33mf6e7768[m Refactor RemoveDuplicates and SecondLargest classes for improved clarity and functionality
+[33ma06db27[m Add RemoveDuplicates class to remove duplicates from an array
+[33mc0a43ec[m Add ArrayisSorted class to check if an array is sorted
+[33me6f60ca[m Implement optimal approach for finding the second largest and second smallest elements in an array
+[33m8ae7c7c[m Add methods to find the second largest element in an array using brute force and optimized approaches
+[33m495eb89[m Add BruteForce2 method for finding the largest element and create SecondLargest class
+[33m6234054[m Add LargestElement class to find the maximum element in an array using brute force
+[33mad31360[m Array Easy
+[33m3294e53[m Add Armstrong number check and implement Divisors class for divisor calculations
+[33m6cac3d9[m Add Armstrongnumber class and implement LCM and GCD calculation in LCMandGCD class
+[33me8c3cd2[m Add LCMandGCD class to calculate GCD using both better and optimal approaches
+[33m05c2116[m Fix isPalindrome method to use original value for comparison
+[33m6b68446[m Add PalindromeNumber class to check if a number is a palindrome and refactor Reverce class for consistency
+[33m72c8b5e[m Add Reverce class to reverse an integer and handle negative values
+[33mdbe2e05[m Refactor CountDigits class to rename method for clarity and implement digit counting logic
+[33m1014185[m Add CountDigits class to count digits that evenly divide a given number
+[33m7f4a826[m Add ReferenceandValue class to demonstrate passing by value in Java
+[33md0379d7[m Add Whileloops class to demonstrate multiplication table using a while loop
+[33m09070bd[m Add Forloops class to calculate the nth Fibonacci number using a loop
+[33ma225220[m Add SwitchStatement class to demonstrate switch-case functionality for area calculations
+[33m73d9221[m Add IfElse class to compare two integers and return comparison result
+[33mc1b52eb[m Add SplitArry class for splitting an array into k subarrays and DataTypes class for displaying sizes of data types
+[33m4b774cc[m Add RotaionCount class to calculate rotation count in rotated sorted arrays
+[33m5e599b3[m Add RotatedSortedArray class with search and pivot functions
+[33mff419bd[m ok
+[33m4e27032[m {commit_message}
+[33m813818a[m maountain
+[33m99b43e0[m Add new binary search implementations
+[33mb3be9f4[m Fixed findFloorElement function and improved code.
+[33m55cfdad[m Binary Serach Question Celing of number is completed
+[33ma832027[m  OrderEgnosticBinarySearch
+[33mf1d1c47[m basic binary search
+[33m295db3a[m all done
+[33m9a8381f[m allquestion complited
+[33mffeb4e4[m Given an array nums of integers, return how many of them contain an even number of digits.
+[33m7a0a494[m 2D Search and return index completed
+[33m8592f5a[m 2D Search completed
+[33mec5c06f[m find min mx
+[33mc357604[m find min mx
+[33mbf6bc41[m Search in str is complet
+[33m3e375ed[m seacrch number in linear
+[33md0f81b2[m question complited
+[33mf1633c9[m max In range
+[33mcfdc8fa[m Arrays swap
+[33m21a4332[m MultiArrayLis
+[33m47392ef[m /MultiDaimentionArray
+[33m197a392[m Arrays and ArrayList/ input in array completed
+[33m35654cd[m old file is deleted
+[33md317e06[m old file is deleted
+[33me29398d[m SwitchStatements
+[33mc4ba971[m calculator program
+[33m64f3148[m reverce num
+[33m55c3697[m find count
+[33m04a338b[m Add do-while and while-loop examples; update Loops.java
+[33m538e8e3[m Add files for conditionals and loops
+[33m83b29a8[m all done
+[33mca4c22e[m start now
