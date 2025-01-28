@@ -2,8 +2,7 @@ package ArrayEasyMediumHard.Medium;
 
 import java.util.Arrays;
 
-import Linear_Search.linerStrSearch;
-
+ 
 public class SetMatrixZeros {
 
     public static void main(String[] args) {
