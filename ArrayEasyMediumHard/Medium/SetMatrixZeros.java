@@ -1,5 +1,9 @@
 package ArrayEasyMediumHard.Medium;
 
+import java.util.Arrays;
+
+import Linear_Search.linerStrSearch;
+
 public class SetMatrixZeros {
 
     public static void main(String[] args) {
@@ -9,14 +13,10 @@ public class SetMatrixZeros {
                 { 7, 8, 9 }
         };
 
-        int[][] result = brutfoceApproch(matrix);
-
-        for (int i = 0; i < result.length; i++) {
-           
-            for (int j = 0; j < result[i].length; j++) {
-                System.out.print(result[i][j] + "  ");
-            }
-            System.out.println();
+        int[][] betterResult = batterApproch(matrix);
+        System.out.println("Result:");
+        for (int[] row : betterResult) {
+            System.out.println(Arrays.toString(row));
         }
 
     }
@@ -31,7 +31,6 @@ public class SetMatrixZeros {
                 }
 
             }
-            // System.out.println(" ");
 
         }
 
@@ -65,6 +64,34 @@ public class SetMatrixZeros {
                 }
             }
         }
+    }
+
+    public static int[][] batterApproch(int[][] nums) {
+        int[] row = new int[nums.length];
+        int[] col = new int[nums[1].length];
+
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums.length; j++) {
+
+                if (nums[i][j] == 0) {
+                    row[i] = 1;
+                    col[j] = 1;
+                }
+            }
+
+        }
+        System.out.println("row" + Arrays.toString(row));
+        System.err.println("col" + Arrays.toString(col));
+
+        for (int r = 0; r < row.length; r++) {
+            for (int c = 0; c < col.length; c++) {
+                if (row[r] == 1 || col[c] == 1) {
+                    nums[r][c] = 0;
+                }
+            }
+        }
+
+        return nums;
     }
 
 }
