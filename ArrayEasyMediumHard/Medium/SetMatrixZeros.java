@@ -11,7 +11,12 @@ public class SetMatrixZeros {
                 { 1, 3, 1, 5 }
         };
 
-        int[][] betterResult = batterApproch(matrix);
+        for (int[] is : matrix) {
+            System.out.println(Arrays.toString(is));
+        }
+        System.out.println();
+
+        int[][] betterResult = optimalApproch(matrix);
         for (int[] is : betterResult) {
             System.out.println(Arrays.toString(is));
         }
@@ -98,7 +103,7 @@ public class SetMatrixZeros {
         int col0 = 1;
 
         for (int row = 0; row < nums.length; row++) {
-            for (int col = 0; col < nums.length; col++) {
+            for (int col = 0; col < nums[row].length; col++) {
 
                 if (nums[row][col] == 0) {
                     // make row and col zero
@@ -109,13 +114,18 @@ public class SetMatrixZeros {
                         col0 = 0;
                     }
 
+                    // for (int[] is : nums) {
+                    // System.out.println(Arrays.toString(is));
+                    // }
+                    // System.out.println();
+
                 }
 
             }
         }
 
         for (int row = 1; row < nums.length; row++) {
-            for (int col = 1; col < nums.length; col++) {
+            for (int col = 1; col < nums[row].length; col++) {
                 // check col and row
                 if (nums[0][col] == 0 || nums[row][0] == 0) {
                     nums[row][col] = 0;
@@ -136,6 +146,7 @@ public class SetMatrixZeros {
                 nums[row][0] = 0;
             }
         }
+
         return nums;
 
     }
