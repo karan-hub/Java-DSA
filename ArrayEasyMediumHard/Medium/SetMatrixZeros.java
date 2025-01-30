@@ -1,24 +1,20 @@
 package ArrayEasyMediumHard.Medium;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class SetMatrixZeros {
 
     public static void main(String[] args) {
-        int[][] matrix = {
-                { 0, 1, 2, 0 },
-                { 3, 4, 5, 2 },
-                { 1, 3, 1, 5 }
-        };
+        ArrayList<ArrayList<Integer>> matrix = new ArrayList<>();
+        matrix.add(new ArrayList<>(Arrays.asList(1, 2, 3)));
+        matrix.add(new ArrayList<>(Arrays.asList(4, 0, 6)));
+        matrix.add(new ArrayList<>(Arrays.asList(7, 8, 9)));
 
-        for (int[] is : matrix) {
-            System.out.println(Arrays.toString(is));
-        }
-        System.out.println();
+        ArrayList<ArrayList<Integer>> result = optimalApproach(matrix);
 
-        int[][] betterResult = optimalApproch(matrix);
-        for (int[] is : betterResult) {
-            System.out.println(Arrays.toString(is));
+        for (ArrayList<Integer> row : result) {
+            System.out.println(row);
         }
 
     }
@@ -151,4 +147,48 @@ public class SetMatrixZeros {
 
     }
 
+    public static ArrayList<ArrayList<Integer>> optimalApproach(ArrayList<ArrayList<Integer>> nums) {
+        int col0 = 1;
+        int rows = nums.size();
+        int cols = nums.get(0).size();
+
+        // Mark rows and columns that need to be zeroed
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                if (nums.get(row).get(col) == 0) {
+                    nums.get(row).set(0, 0);
+                    if (col != 0) {
+                        nums.get(0).set(col, 0);
+                    } else {
+                        col0 = 0;
+                    }
+                }
+            }
+        }
+
+        // Set elements to zero based on markers
+        for (int row = 1; row < rows; row++) {
+            for (int col = 1; col < cols; col++) {
+                if (nums.get(row).get(0) == 0 || nums.get(0).get(col) == 0) {
+                    nums.get(row).set(col, 0);
+                }
+            }
+        }
+
+        // Handle first row
+        if (nums.get(0).get(0) == 0) {
+            for (int col = 0; col < cols; col++) {
+                nums.get(0).set(col, 0);
+            }
+        }
+
+        // Handle first column
+        if (col0 == 0) {
+            for (int row = 0; row < rows; row++) {
+                nums.get(row).set(0, 0);
+            }
+        }
+
+        return nums;
+    }
 }
