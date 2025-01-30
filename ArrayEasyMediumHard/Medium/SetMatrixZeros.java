@@ -6,15 +6,14 @@ public class SetMatrixZeros {
 
     public static void main(String[] args) {
         int[][] matrix = {
-                { 1, 2, 3 },
-                { 4, 0, 6 },
-                { 7, 8, 9 }
+                { 0, 1, 2, 0 },
+                { 3, 4, 5, 2 },
+                { 1, 3, 1, 5 }
         };
 
         int[][] betterResult = batterApproch(matrix);
-        System.out.println("Result:");
-        for (int[] row : betterResult) {
-            System.out.println(Arrays.toString(row));
+        for (int[] is : betterResult) {
+            System.out.println(Arrays.toString(is));
         }
 
     }
@@ -70,7 +69,7 @@ public class SetMatrixZeros {
         int[] col = new int[nums[1].length];
 
         for (int i = 0; i < nums.length; i++) {
-            for (int j = 0; j < nums.length; j++) {
+            for (int j = 0; j < nums[i].length; j++) {
 
                 if (nums[i][j] == 0) {
                     row[i] = 1;
@@ -81,15 +80,17 @@ public class SetMatrixZeros {
         }
         System.out.println("row" + Arrays.toString(row));
         System.err.println("col" + Arrays.toString(col));
-
+        System.out.print("[");
         for (int r = 0; r < row.length; r++) {
             for (int c = 0; c < col.length; c++) {
                 if (row[r] == 1 || col[c] == 1) {
                     nums[r][c] = 0;
                 }
             }
+            System.out.print(Arrays.toString(nums[r]));
         }
 
+        System.out.println("]");
         return nums;
     }
 
