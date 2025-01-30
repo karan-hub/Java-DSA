@@ -94,4 +94,50 @@ public class SetMatrixZeros {
         return nums;
     }
 
+    public static int[][] optimalApproch(int[][] nums) {
+        int col0 = 1;
+
+        for (int row = 0; row < nums.length; row++) {
+            for (int col = 0; col < nums.length; col++) {
+
+                if (nums[row][col] == 0) {
+                    // make row and col zero
+                    nums[row][0] = 0;
+                    if (col != 0) {
+                        nums[row][col] = 0;
+                    } else {
+                        col0 = 0;
+                    }
+
+                }
+
+            }
+        }
+
+        for (int row = 1; row < nums.length; row++) {
+            for (int col = 1; col < nums.length; col++) {
+                // check col and row
+                if (nums[0][col] == 0 || nums[row][0] == 0) {
+                    nums[row][col] = 0;
+                }
+            }
+        }
+
+        if (nums[0][0] == 0) {
+            for (int col = 0; col < nums.length; col++) {
+
+                nums[0][col] = 0;
+            }
+        }
+
+        if (col0 == 0) {
+            for (int row = 0; row < nums.length; row++) {
+
+                nums[row][0] = 0;
+            }
+        }
+        return nums;
+
+    }
+
 }
