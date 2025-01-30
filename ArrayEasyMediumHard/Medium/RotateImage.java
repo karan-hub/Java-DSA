@@ -8,28 +8,31 @@ public class RotateImage {
                 { 7, 8, 9 }
         };
 
-        rotate(matrix);
+        int[][] rotatedMatrix = rotate(matrix);
 
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                System.out.print(matrix[i][j] + " ");
+        for (int i = 0; i < rotatedMatrix.length; i++) {
+            for (int j = 0; j < rotatedMatrix[i].length; j++) {
+                System.out.print(rotatedMatrix[i][j] + " ");
             }
             System.out.println();
         }
 
     }
 
-    public static void rotate(int[][] nums) {
+    public static int[][] rotate(int[][] nums) {
 
-        int[][] result = new int[nums.length][];
+        int n = nums.length;
+        int[][] result = new int[n][n];
 
-        for (int row = 0; row < result.length; row++) {
-            for (int col = 0; col < result.length; col++) {
-
-                result[col][(nums[row].length - row) - 1] = nums[row][col];
+        for (int row = 0; row < nums.length; row++) {
+            for (int col = 0; col < nums[row].length; col++) {
+                int newRow = col;
+                int newCol = n - row - 1;
+                result[newRow][newCol] = nums[row][col];
 
             }
         }
+        return result;
 
     }
 }
