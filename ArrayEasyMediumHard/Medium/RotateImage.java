@@ -8,7 +8,7 @@ public class RotateImage {
                 { 7, 8, 9 }
         };
 
-        int[][] rotatedMatrix = rotate(matrix);
+        int[][] rotatedMatrix = optimalApproch(matrix);
 
         for (int i = 0; i < rotatedMatrix.length; i++) {
             for (int j = 0; j < rotatedMatrix[i].length; j++) {
@@ -35,4 +35,20 @@ public class RotateImage {
         return result;
 
     }
+
+    public static int[][] optimalApproch(int[][] nums) {
+        int n = nums.length;
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                int temp = nums[i][j];
+                nums[i][j] = nums[j][i];
+                nums[j][i] = temp;
+            }
+        }
+
+        return nums;
+    }
+
+    
+
 }
