@@ -29,13 +29,13 @@ public class SpiralTraversal {
         while (startCol <= endCol && startRow <= endRow) {
             // TOP
             for (int top = startCol; top <= endCol; top++) {
-                list.add(nums[startCol][top]);
+                list.add(nums[startRow][top]);
                 // [ 1, 2, 3, 4 ]
             }
 
-            for (Integer integer : list) {
-                System.out.print(integer + " ");
-            }
+            // for (Integer integer : list) {
+            // System.out.print(integer + " ");
+            // }
 
             // Right
             for (int right = startRow + 1; right <= endRow; right++) {
@@ -47,14 +47,17 @@ public class SpiralTraversal {
                  * [....16] endRow
                  */
             }
-            System.out.println(" ");
-            for (Integer integer : list) {
-                System.out.print(integer + " ");
-            }
+            // System.out.println(" ");
+            // for (Integer integer : list) {
+            // System.out.print(integer + " ");
+            // }
 
             // Bottom
             for (int bottom = endCol - 1; bottom >= startCol; bottom--) {
-                list.add(nums[endCol][bottom]);
+                if (startRow == endRow) {
+                    break;
+                }
+                list.add(nums[startRow][bottom]);
                 /*
                  * [ 13, 14, 15, 16 ]
                  * | | |
@@ -62,15 +65,18 @@ public class SpiralTraversal {
                  */
             }
 
-            System.out.println(" ");
+            // System.out.println(" ");
 
-            for (Integer integer : list) {
-                System.out.print(integer + " ");
-            }
+            // for (Integer integer : list) {
+            // System.out.print(integer + " ");
+            // }
 
             // Left
 
             for (int left = endRow - 1; left >= startRow + 1; left--) {
+                if (startCol == endCol) {
+                    break;
+                }
                 list.add(nums[left][startCol]);
                 /*
                  * [1......], --> checked
@@ -81,26 +87,27 @@ public class SpiralTraversal {
 
             }
 
-            System.out.println(" ");
+            // System.out.println(" ");
 
-            for (Integer integer : list) {
-                System.out.print(integer + " ");
-            }
+            // for (Integer integer : list) {
+            // System.out.print(integer + " ");
+            // }
 
             startRow++;
             startCol++;
             endRow--;
             endCol--;
-            /*[
+            /*
+             * [
              * [ - , - , - , - ]
              * [ | , 6 , 7 , | ]
              * [ | , 10, 11, | ]
              * [ - , - , - , - ]
              * ]
              */
-            System.out.println(" ");
+            // System.out.println(" ");
 
-            System.out.println("pass 2");
+            // System.out.println("pass 2");
 
         }
 
