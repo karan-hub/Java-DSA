@@ -1,22 +1,32 @@
 package ArrayEasyMediumHard.Medium;
 
-import question.reverceNum;
+import java.util.Arrays;
 
 public class RotateImage {
     public static void main(String[] args) {
         int[][] matrix = {
                 { 1, 2, 3 },
                 { 4, 5, 6 },
-                { 7, 8, 9 }
+                { 7, 8, 9 },
         };
+        for (int[] is : matrix) {
+            System.out.println(Arrays.toString(is));
+        }
+        System.out.println("\n\n");
 
-        int[][] rotatedMatrix = optimalApproch(matrix);
+        int[][] rotatedMatrix = optimalApproach(matrix);
 
         for (int i = 0; i < rotatedMatrix.length; i++) {
             for (int j = 0; j < rotatedMatrix[i].length; j++) {
                 System.out.print(rotatedMatrix[i][j] + " ");
             }
             System.out.println();
+        }
+
+        System.out.println("\n\n");
+        int[][] rotatedMatrix2 = rotate(matrix);
+        for (int[] is : rotatedMatrix2) {
+            System.out.println(Arrays.toString(is));
         }
 
     }
@@ -38,14 +48,16 @@ public class RotateImage {
 
     }
 
-    public static int[][] optimalApproch(int[][] nums) {
-
-        for (int i = 0; i < nums.length; i++) {
+    public static int[][] optimalApproach(int[][] nums) {
+        // Step 1: Transpose the matrix
+        for (int i = 0; i < nums.length; i++) { // Fix: Include all rows
             for (int j = i + 1; j < nums.length; j++) {
                 swap(nums, i, j);
             }
         }
-        reverce(nums);
+
+        // Step 2: Reverse each row
+        reverse(nums);
         return nums;
     }
 
@@ -61,18 +73,14 @@ public class RotateImage {
         nums[j] = temp;
     }
 
-    public static void reverce(int[][] nums) {
-
-        for (int rows = 0; rows < nums.length; rows++) {
-            int i = 0;
-            int j = nums[rows].length-1;
-
-            while (i < j) {
-                swap(nums[rows], i, j);
+    public static void reverse(int[][] nums) {
+        for (int row = 0; row < nums.length; row++) {
+            int i = 0, j = nums[row].length - 1;
+            while (i < j) { // Fix: Prevents unnecessary swaps
+                swap(nums[row], i, j);
                 i++;
                 j--;
             }
-
         }
     }
 
