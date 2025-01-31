@@ -1,5 +1,7 @@
 package ArrayEasyMediumHard.Medium;
 
+import question.reverceNum;
+
 public class RotateImage {
     public static void main(String[] args) {
         int[][] matrix = {
@@ -37,18 +39,41 @@ public class RotateImage {
     }
 
     public static int[][] optimalApproch(int[][] nums) {
-        int n = nums.length;
+
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
-                int temp = nums[i][j];
-                nums[i][j] = nums[j][i];
-                nums[j][i] = temp;
+                swap(nums, i, j);
             }
         }
-
+        reverce(nums);
         return nums;
     }
 
-    
+    public static void swap(int[][] nums, int i, int j) {
+        int temp = nums[i][j];
+        nums[i][j] = nums[j][i];
+        nums[j][i] = temp;
+    }
+
+    public static void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+
+    public static void reverce(int[][] nums) {
+
+        for (int rows = 0; rows < nums.length; rows++) {
+            int i = 0;
+            int j = nums[rows].length-1;
+
+            while (i < j) {
+                swap(nums[rows], i, j);
+                i++;
+                j--;
+            }
+
+        }
+    }
 
 }
