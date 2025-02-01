@@ -7,7 +7,7 @@ public class CountSubarray {
         int[] nums = { 3, 1, 2, 4 };
         int k = 6;
 
-        System.out.println(brutForce(nums, k));
+        System.out.println(batterSolutation(nums, k));
 
     }
 
@@ -29,5 +29,23 @@ public class CountSubarray {
 
         return count;
 
+    }
+
+    public static int batterSolutation(int[] nums, int n) {
+        int count = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            int sum = 0;
+            for (int j = i; j < nums.length; j++) {
+                sum += nums[j];
+
+                if (sum == n) {
+                    count++;
+                    break;
+                }
+            }
+        }
+
+        return count;
     }
 }
