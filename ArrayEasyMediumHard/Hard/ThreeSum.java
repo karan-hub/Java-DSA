@@ -13,6 +13,7 @@ public class ThreeSum {
 
     }
 
+    // O(n)^3
     public static Set<List<Integer>> brutForce(int[] nums) {
         Set<List<Integer>> set = new HashSet<>();
         for (int i = 0; i < nums.length; i++) {
@@ -33,6 +34,40 @@ public class ThreeSum {
             }
         }
         return set;
-
     }
+
+    // O(n)^2
+
+    public static List<List<Integer>> findTriplets(int[] nums) {
+        // Set to store unique triplets (avoiding duplicates)
+        Set<List<Integer>> uniqueTriplets = new HashSet<>();
+
+        // Outer loop to pick one number at a time
+        for (int i = 0; i < nums.length; i++) {
+            // HashSet to store numbers we have seen in this iteration
+            Set<Integer> seenNumbers = new HashSet<>();
+            // Target sum for the remaining two numbers
+            int targetSum = -nums[i];
+
+            // Inner loop to find two numbers that sum up to targetSum
+            for (int j = i + 1; j < nums.length; j++) {
+                int thirdNumber = targetSum - nums[j]; // The number needed to complete the triplet
+
+                // If thirdNumber is already in seenNumbers, we have found a valid triplet
+                if (!seenNumbers.contains(thirdNumber)) {
+                    // Create a triplet
+                    List<Integer> triplet = Arrays.asList(nums[i], nums[j], thirdNumber);
+                    triplet.sort(null); // Sort to maintain order and avoid duplicate variations
+                    uniqueTriplets.add(triplet); // Add to the set
+                }
+
+                // Add the current number to seenNumbers for future checks
+                seenNumbers.add(nums[j]);
+            }
+        }
+
+        // Convert the set to a list and return the result
+        return new ArrayList<>(uniqueTriplets);
+    }
+
 }
