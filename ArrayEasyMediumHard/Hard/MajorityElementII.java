@@ -6,7 +6,7 @@ import java.util.List;
 public class MajorityElementII {
 
     public static void main(String[] args) {
-        int[] arr = {11, 33, 33, 11, 33, 11};
+        int[] arr = { 11, 33, 33, 11, 33, 11 };
         List<Integer> ans = brutForce(arr);
         System.out.print("The majority elements are: ");
         for (int i = 0; i < ans.size(); i++) {
@@ -16,6 +16,8 @@ public class MajorityElementII {
 
     }
 
+    // TC => O(n)^2
+    // SC => O(1)
     public static List<Integer> brutForce(int[] nums) {
         List<Integer> list = new ArrayList<>();
 
