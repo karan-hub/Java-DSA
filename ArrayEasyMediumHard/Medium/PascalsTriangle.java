@@ -5,11 +5,14 @@ public class PascalsTriangle {
         int r = 5; // row number
         int c = 3; // col number
         int element = pascalTriangle(r, c);
-        System.out.println("The element at position (r,c) is: " + element);
+        // System.out.println("The element at position (r,c) is: " + element);
 
         // printing the entire row n:
         int n = 5;
-        pascalTriangle(n);
+        // pascalTriangle(n);
+
+        // printing the entire row n Optimal:
+        pascalRow(6);
 
     }
 
@@ -45,4 +48,19 @@ public class PascalsTriangle {
         }
         System.out.println();
     }
+
+    // optimal
+    public static void pascalRow(int row) {
+        int ans = 1;
+        System.out.print(ans + " ");
+
+        for (int col = 1; col < row; col++) {
+
+            ans = ans * (row - col);
+            ans = ans / col;
+            System.out.print(ans + " ");
+        }
+
+    }
+
 }
