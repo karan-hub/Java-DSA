@@ -1,5 +1,8 @@
 package ArrayEasyMediumHard.Medium;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PascalsTriangle {
     public static void main(String[] args) {
         int r = 5; // row number
@@ -12,7 +15,11 @@ public class PascalsTriangle {
         // pascalTriangle(n);
 
         // printing the entire row n Optimal:
-        pascalRow(6);
+        // pascalRow(6);
+        List<List<Integer>> list = pascalTrangle(4);
+        for (List<Integer> list2 : list) {
+            System.out.println(list2.toString());
+        }
 
     }
 
@@ -50,17 +57,30 @@ public class PascalsTriangle {
     }
 
     // optimal
-    public static void pascalRow(int row) {
+    public static List<Integer> pascalRow(int row) {
+        List<Integer> ansList = new ArrayList<>();
+
         int ans = 1;
-        System.out.print(ans + " ");
+        ansList.add(ans);
+        // System.out.print(ans + " ");
 
         for (int col = 1; col < row; col++) {
-
             ans = ans * (row - col);
             ans = ans / col;
-            System.out.print(ans + " ");
+            // System.out.print(ans + " ");
+            ansList.add(ans);
         }
+        return ansList;
 
     }
 
+    // hole trangle
+    public static List<List<Integer>> pascalTrangle(int row) {
+        List<List<Integer>> Triangle = new ArrayList<>();
+        for (int i = 1; i <= row; i++) {
+            Triangle.add(pascalRow(i));
+        }
+
+        return Triangle;
+    }
 }
