@@ -75,6 +75,16 @@ public class PascalsTriangle {
     }
 
     // hole trangle
+
+    /*
+     * [1]
+     * [1, 1]
+     * [1, 2, 1]
+     * [1, 3, 3, 1]
+     * [1, 4, 6, 4, 1]
+     * [1, 5, 10, 10, 5, 1]
+     * 
+     */
     public static List<List<Integer>> pascalTrangle(int row) {
         List<List<Integer>> Triangle = new ArrayList<>();
         for (int i = 1; i <= row; i++) {
