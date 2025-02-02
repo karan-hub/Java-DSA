@@ -6,7 +6,7 @@ public class ThreeSum {
     public static void main(String[] args) {
 
         int[] arr = { -1, 0, 1, 2, -1, -4 };
-        Set<List<Integer>> set = brutForce(arr);
+        List<List<Integer>> set = optimalApproach(arr);
         for (List<Integer> list : set) {
             System.out.println(Arrays.toString(list.toArray()));
         }
@@ -70,4 +70,40 @@ public class ThreeSum {
         return new ArrayList<>(uniqueTriplets);
     }
 
+    // O(NlogN)+O(N^2) = O(N^2)
+    // O(N) (for storing output triplets)
+    public static List<List<Integer>> optimalApproach(int[] nums) {
+        List<List<Integer>> list = new ArrayList<>();
+        Arrays.sort(nums); // Sorting to use the two-pointer technique
+
+        for (int i = 0; i < nums.length; i++) {
+            if (i > 0 && nums[i] == nums[i - 1])
+                continue; // Skip duplicate `i` values
+
+            int j = i + 1, k = nums.length - 1;
+
+            while (j < k) {
+                int sum = nums[i] + nums[j] + nums[k];
+
+                if (sum < 0) {
+                    j++;
+                } else if (sum > 0) {
+                    k--;
+                } else {
+                    list.add(Arrays.asList(nums[i], nums[j], nums[k]));
+                    j++;
+                    k--;
+
+                    // Skip duplicate values for `j`
+                    while (j < k && nums[j] == nums[j - 1])
+                        j++;
+
+                    // Skip duplicate values for `k`
+                    while (j < k && nums[k] == nums[k + 1])
+                        k--;
+                }
+            }
+        }
+        return list;
+    }
 }
