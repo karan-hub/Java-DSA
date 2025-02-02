@@ -7,6 +7,10 @@ public class PascalsTriangle {
         int element = pascalTriangle(r, c);
         System.out.println("The element at position (r,c) is: " + element);
 
+        // printing the entire row n:
+        int n = 5;
+        pascalTriangle(n);
+
     }
 
     // nCr = n! / (r! * (n-r)!)
@@ -32,5 +36,13 @@ public class PascalsTriangle {
     public static int pascalTriangle(int r, int c) {
         int element = (int) (nCr(r - 1, c - 1)).longValue();
         return element;
+    }
+
+    // printing the entire row n:
+    public static void pascalTriangle(int n) {
+        for (int c = 1; c <= n; c++) {
+            System.out.print(nCr(n - 1, c - 1) + " ");
+        }
+        System.out.println();
     }
 }
