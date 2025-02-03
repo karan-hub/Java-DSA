@@ -10,7 +10,7 @@ public class ThreeSum {
         for (List<Integer> list : set) {
             System.out.println(Arrays.toString(list.toArray()));
         }
-
+         
     }
 
     // O(n)^3
@@ -70,8 +70,8 @@ public class ThreeSum {
         return new ArrayList<>(uniqueTriplets);
     }
 
-    // O(NlogN)+O(N^2) = O(N^2)
-    // O(N) (for storing output triplets)
+    // TC => O(NlogN)+O(N^2) = O(N^2)
+    // SC => O(N) (for storing output triplets)
     public static List<List<Integer>> optimalApproach(int[] nums) {
         List<List<Integer>> list = new ArrayList<>();
         Arrays.sort(nums); // Sorting to use the two-pointer technique
