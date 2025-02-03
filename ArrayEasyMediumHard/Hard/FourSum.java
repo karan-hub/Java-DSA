@@ -5,7 +5,7 @@ import java.util.*;
 public class FourSum {
     public static void main(String[] args) {
 
-        int[] nums = { -1, 0, 1, 2, -1, -4 };
+        int[] nums = { -1, 0, 1, 2,  -1, -4 };
          Set<List<Integer>> ans = brutForce(nums ,0);
         for (List<Integer> list : ans) {
             System.out.println("result" + list.toString());
@@ -36,4 +36,7 @@ public class FourSum {
         return set;
 
     }
+
+
+    
 }
