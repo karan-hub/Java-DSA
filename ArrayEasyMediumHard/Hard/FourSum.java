@@ -37,6 +37,8 @@ public class FourSum {
 
     }
 
+    // TC -> n^3
+    //  Sc -> O(n)+ O(logN)
     public static Set<List<Integer>> batterApproch(int[] nums, int target) {
 
         Set<List<Integer>> set = new HashSet<>();
@@ -62,5 +64,7 @@ public class FourSum {
         return set;
 
     }
+
+     
 
 }
