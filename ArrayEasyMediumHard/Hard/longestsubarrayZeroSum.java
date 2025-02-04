@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class longestsubarrayZeroSum {
     public static void main(String[] args) {
         int a[] = { 9, -3, 3, -1, 6, -5 };
-        System.out.println(optimalApproach(a));
+        System.out.println(brutForce(a));
 
     }
 
@@ -37,6 +37,21 @@ public class longestsubarrayZeroSum {
         return maxLength;
     }
 
+    public static int brutForce(int[] nums){
+        int sum =0;
+        int result =0;
+        for (int i = 0; i < nums.length; i++) {
+            sum =nums[i];
+            for (int j = i+1; j < nums.length; j++) {
+                sum+=nums[j];
+                if (sum ==0) {
+                    result  = Math.max(result, j-i+1);
+                }
+                
+            }
+        }
+        return result;
+    }
 
-    
+
 }
