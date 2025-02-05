@@ -15,8 +15,6 @@ public class MergeOverlappingIntervals {
         System.out.println();
     }
 
-    
-
     // Sub-intervals
     public static List<List<Integer>> brutForce(int[][] nums) {
         Arrays.sort(nums, (a, b) -> a[0] - b[0]);
@@ -44,6 +42,23 @@ public class MergeOverlappingIntervals {
 
     }
 
-    
-}
+    public static List<List<Integer>> optimalSolution(int[][] nums) {
+        Arrays.sort(nums, (a, b) -> a[0] - b[0]);
+        List<List<Integer>> ans = new ArrayList<>();
 
+        for (int i = 0; i < nums.length; i++) {
+            if (ans.isEmpty() || nums[i][0] > ans.get(ans.size() - 1).get(1)) {
+                ans.add(new ArrayList<>(Arrays.asList(Arrays.stream(nums[i])
+                        .boxed()
+                        .toArray(Integer[]::new))));
+
+            }else{
+                
+            }
+        }
+
+        return ans;
+
+    }
+
+}
