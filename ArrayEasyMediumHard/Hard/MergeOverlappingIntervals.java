@@ -7,10 +7,10 @@ import java.util.List;
 public class MergeOverlappingIntervals {
     public static void main(String[] args) {
         int[][] arr = { { 1, 3 }, { 8, 10 }, { 2, 6 }, { 15, 18 } };
-        List<List<Integer>> ans = optimalSolution(arr);
+         int [][] ans = Solution(arr);
         System.out.print("The merged intervals are: \n");
-        for (List<Integer> it : ans) {
-            System.out.print("[" + it.get(0) + ", " + it.get(1) + "] ");
+        for (int [] it : ans) {
+           System.out.println(Arrays.toString(it));
         }
         System.out.println();
     }
@@ -58,6 +58,26 @@ public class MergeOverlappingIntervals {
         }
 
         return ans;
+
+    }
+
+    public static  int[][] Solution(int[][] nums) {
+        Arrays.sort(nums, (a, b) -> a[0] - b[0]);
+        int[][] ans = new int[nums.length][2];
+        int index = -1;
+
+        for (int i = 0; i < nums.length; i++) {
+            if (index == -1 || nums[i][0] > ans[index][1]) {
+                index++;
+                ans[index][0] = nums[i][0];
+                ans[index][1] = nums[i][1];
+
+            } else {
+                ans[index][1] = Math.max(ans[index][1], nums[i][1]);
+            }
+        }
+
+        return Arrays.copyOf(ans, index + 1);
 
     }
 
