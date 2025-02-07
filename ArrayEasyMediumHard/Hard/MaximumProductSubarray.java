@@ -2,8 +2,8 @@ package ArrayEasyMediumHard.Hard;
 
 public class MaximumProductSubarray {
     public static void main(String[] args) {
-        int[] arr = { 1, 2, -3, 0, -4, -5 };
-        int answer = maxProductSubArray(arr);
+        int[] arr = { 1, 2, -3, 0, -4, 0, -5 };
+        int answer = brutForce(arr);
         System.out.println("The maximum product subarray is: " + answer);
 
     }
@@ -27,4 +27,20 @@ public class MaximumProductSubarray {
 
         return maxi;
     }
+
+    public static int brutForce(int[] nums) {
+        int maxi = Integer.MIN_VALUE;
+        for (int i = 0; i < nums.length; i++) {
+            int product = 1;
+            for (int j = i; j < nums.length; j++) {
+                product = product * nums[j];
+
+                maxi = Math.max(maxi, product);
+            }
+        }
+
+        return maxi;
+
+    }
+
 }
