@@ -68,7 +68,7 @@ public class SecondLargest {
                 
             }
 
-            if(i<smallest){
+             if(i<smallest){
                 secondsmallest = smallest;
                 smallest=i;
             }else if(i<secondsmallest){
