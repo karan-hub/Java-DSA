@@ -5,10 +5,10 @@ import java.util.Arrays;
 public class MergeSortedArray {
     public static void main(String[] args) {
 
-        int[] arr1 = { 1, 4, 8, 10 };
-        int[] arr2 = { 2, 3, 9 };
-        int n = 4, m = 3;
-        optimalOne(arr1, m, arr2, n);
+        int[] arr1 = { 1, 2, 3, 0, 0, 0 };
+        int[] arr2 = { 2, 5, 6 };
+        int n = 3, m = 3;
+        optimalTwo(arr1, m, arr2, n);
 
     }
 
@@ -97,6 +97,48 @@ public class MergeSortedArray {
         int temp = nums[i];
         nums[i] = nums[j];
         nums[j] = temp;
+    }
+
+    public static void optimalTwo(int[] nums1, int m, int[] nums2, int n) {
+        int len = m + n;
+        int gap = (len / 2) + (len % 2); // Ceiling of len/2
+
+        while (gap > 0) {
+            int left = 0;
+            int right = left + gap;
+
+            while (right < len) {
+                if (left < m && right < m) {
+                    // Swap within nums1
+                    swapIf(nums1, left, nums1, right);
+                } else if (left < m && right >= m) {
+                    // Swap between nums1 and nums2
+                    swapIf(nums1, left, nums2, right - m);
+                } else {
+                    // Swap within nums2
+                    swapIf(nums2, left - m, nums2, right - m);
+                }
+                left++;
+                right++;
+            }
+
+            if (gap == 1) {
+                break;
+            }
+            gap = (gap / 2) + (gap % 2); // Reduce gap
+        }
+
+        // Copy sorted nums2 into nums1
+        System.arraycopy(nums2, 0, nums1, m, n);
+        System.out.println(Arrays.toString(nums1));
+    }
+
+    private static void swapIf(int[] nums1, int i, int[] nums2, int j) {
+        if (nums1[i] > nums2[j]) {
+            int temp = nums1[i];
+            nums1[i] = nums2[j];
+            nums2[j] = temp;
+        }
     }
 
 }
