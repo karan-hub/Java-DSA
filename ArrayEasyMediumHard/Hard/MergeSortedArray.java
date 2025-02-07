@@ -8,7 +8,7 @@ public class MergeSortedArray {
         int[] arr1 = { 1, 4, 8, 10 };
         int[] arr2 = { 2, 3, 9 };
         int n = 4, m = 3;
-        brutForce(arr1, m, arr2, n);
+        optimalOne(arr1, m, arr2, n);
 
     }
 
@@ -45,7 +45,7 @@ public class MergeSortedArray {
             if (i < n) {
                 nums1[i] = ans[i];
             } else {
-                nums2[i-n] = ans[i];
+                nums2[i - n] = ans[i];
             }
         }
 
@@ -53,7 +53,50 @@ public class MergeSortedArray {
         System.out.println(Arrays.toString(nums2));
     }
 
-    public static void optimalOne(int[] nums1, int m, int[] nums2, int n){
-        
+    public static void optimalOne(int[] nums1, int m, int[] nums2, int n) {
+        int left = n - 1;
+        int right = 0;
+
+        while (left >= 0 && right < m) {
+            if (nums1[left] > nums2[right]) {
+                swap(nums1, left, nums2, right);
+                left--;
+                right++;
+            } else {
+                break;
+            }
+        }
+
+        Sort(nums1);
+        Sort(nums2);
+        System.out.println(Arrays.toString(nums1));
+        System.out.println(Arrays.toString(nums2));
+
     }
+
+    private static void swap(int[] nums1, int left, int[] nums2, int right) {
+        int temp = nums1[left];
+        nums1[left] = nums2[right];
+        nums2[right] = temp;
+    }
+
+    private static void Sort(int[] nums) {
+        int i = 0;
+        int j = nums.length - 1;
+        while (i < j) {
+            if (nums[i] > nums[j]) {
+                swap(i, nums, j);
+            }
+            i++;
+            j--;
+        }
+
+    }
+
+    private static void swap(int i, int[] nums, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+
 }
