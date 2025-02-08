@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class repeatingMissing {
     public static void main(String[] args) {
         int[] nums = new int[] { 3, 1, 2, 5, 3 };
-        System.out.println(Arrays.toString(batterApproch(nums)));
+        System.out.println(Arrays.toString(optimalApproch(nums)));
     }
 
     public static int[] brutforce(int[] nums) {
@@ -35,6 +35,7 @@ public class repeatingMissing {
         return new int[] { missing, repiting };
     }
 
+    // TC O(2n) SC O(n)
     public static int[] batterApproch(int[] nums) {
         int[] hashArray = new int[nums.length + 1];
         for (int num : nums) {
@@ -54,5 +55,53 @@ public class repeatingMissing {
         }
 
         return new int[] { missing, repiting };
+    }
+
+    public static int[] optimalApproch(int[] nums) {
+        long n = (long) nums.length;
+        // S - Sn ----> X-Y
+        long Sn = (n * (n + 1)) / 2;
+        // S^2 - Sn^2 ----> X^2 - Y^2
+        long S2n = (n * (n + 1) * (2 * n + 1)) / 6;
+        long S = 0L;
+        long S2 = 0L;
+        for (int num : nums) {
+            S += num;
+            S2 += (num * num);
+        }
+        // X-Y =-4
+        long val1 = S - Sn;
+        // X^2 - Y^2
+        long val2 = S2 - S2n;
+        val2 = val2 / val1;
+
+        int x = (int) (val1 + val2) / 2;
+        int y = (int) (x - val1);
+
+        return new int[] { x, y };
+    }
+
+    public static int[] optimalApproch(int[] nums) {
+        long n = (long) nums.length;
+        // S - Sn ----> X-Y
+        long Sn = (n * (n + 1)) / 2;
+        // S^2 - Sn^2 ----> X^2 - Y^2
+        long S2n = (n * (n + 1) * (2 * n + 1)) / 6;
+        long S = 0L;
+        long S2 = 0L;
+        for (int num : nums) {
+            S += num;
+            S2 += (num * num);
+        }
+        // X-Y =-4
+        long val1 = S - Sn;
+        // X^2 - Y^2
+        long val2 = S2 - S2n;
+        val2 = val2 / val1;
+
+        int x = (int) (val1 + val2) / 2;
+        int y = (int) (x - val1);
+
+        return new int[] { x, y };
     }
 }
