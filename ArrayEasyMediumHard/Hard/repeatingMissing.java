@@ -1,11 +1,15 @@
 package ArrayEasyMediumHard.Hard;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class repeatingMissing {
     public static void main(String[] args) {
-        int[] nums = new int[] { 3, 1, 2, 5, 3 };
-        System.out.println(Arrays.toString(optimalApproch(nums)));
+        int[] nums = new int[] { 2, 2 };
+        // System.out.println(Arrays.toString(optimalApproch(nums)));
+
+        System.out.println(findTwoElement(nums));
     }
 
     public static int[] brutforce(int[] nums) {
@@ -81,7 +85,7 @@ public class repeatingMissing {
         return new int[] { x, y };
     }
 
-    public static int[] optimalApproch(int[] nums) {
+    public static ArrayList<Integer> findTwoElement(int[] nums) {
         long n = (long) nums.length;
         // S - Sn ----> X-Y
         long Sn = (n * (n + 1)) / 2;
@@ -102,6 +106,6 @@ public class repeatingMissing {
         int x = (int) (val1 + val2) / 2;
         int y = (int) (x - val1);
 
-        return new int[] { x, y };
+        return new ArrayList<>(List.of(x, y));
     }
 }
