@@ -2,6 +2,11 @@ package BinarySearchEasyMediunHard.Easy;
 
 public class koko {
     public static void main(String[] args) {
+        int[] piles = {30, 11, 23, 4, 20};
+        int h = 5;
+        koko obj = new koko();
+        int result = obj.minEatingSpeed(piles, h);
+        System.out.println("Minimum eating speed: " + result);
 
     }
 
@@ -9,8 +14,7 @@ public class koko {
         int start = 0;
         // ok
         int end = max(piles);
-        int ans = Integer.MAX_VALUE;
-
+ 
         while (start <= end) {
             int mid = (start + end) / 2;
             // ok
@@ -18,16 +22,11 @@ public class koko {
             // ok
             if (calculatedHour <= h) {
                 end = mid - 1;
-                ans = min(ans, calculatedHour);
-            } else {
+             } else {
                 start = mid + 1;
-                ans = min(ans, calculatedHour);
-
-            }
-
+             }
         }
-
-        return ans;
+        return start;
 
     }
 
@@ -40,12 +39,13 @@ public class koko {
         return max;
     }
 
-    public int speed(int mid, int[] arr) {
-        int totalTime = 0;
-        // ok
-        for (int element : arr)
-            totalTime += ceil(element / mid);
-        return totalTime;
+    public int speed(int mid, int[] v) {
+        int totalH = 0;
+        int n = v.length;
+        //find total hours:
+        for (int i = 0; i < n; i++) 
+        totalH += Math.ceil((double)(v[i]) / (double)(mid));
+        return totalH;
     }
 
     public int min(int a, int b) {
@@ -53,9 +53,6 @@ public class koko {
             return a;
         return b;
     }
-
-    public int ceil(double num) {
-        return (num == (int) num) ? (int) num : (int) num + 1;
-    }
+ 
 
 }
