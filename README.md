@@ -70,6 +70,22 @@
 
 ---
 
+#### 📋 **Lec 2: Cyclic Sort**
+**Progress:** `7 / 7`
+
+| 🔢  | 📝 **Topic**                     | 🎯 **Difficulty** | ✅ **Status** |
+|-----|----------------------------------|-------------------|---------------|
+| 1️⃣  | Cyclic Sort                     | 🟢 Easy           | ✅ Done       |
+| 2️⃣  | Find All Duplicates             | 🟡 Medium         | ✅ Done       |
+| 3️⃣  | Find All Missing Numbers        | 🟡 Medium         | ✅ Done       |
+| 4️⃣  | Find Duplicate                  | 🟡 Medium         | ✅ Done       |
+| 5️⃣  | Missing Number                  | 🟢 Easy           | ✅ Done       |
+| 6️⃣  | First Missing Positive          | 🔴 Hard           | ✅ Done       |
+| 7️⃣  | Set Mismatch                    | 🟡 Medium         | ✅ Done       |
+
+ 
+
+
 ### 🧩 **Step 3: Solve Problems on Arrays [Easy → Medium → Hard]**
 **Progress:** `40 / 40`
 
