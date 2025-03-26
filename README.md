@@ -23,23 +23,7 @@
 | 7️⃣  | While loops                                | 🟢 Easy           | ✅ Done       |
 | 8️⃣  | Functions (Pass by Reference and Value)    | 🟢 Easy           | ✅ Done       |
 | 9️⃣  | Time Complexity [Basics]                   | 🟢 Easy           | ✅ Done       |
-
-| 🔢  | 📝 **Topic**                                | 🎯 **Difficulty** | ✅ **Status** |
-|-----|--------------------------------------------|-------------------|---------------|
-| 1️⃣  | [Find Missing Number](git@github.com:karan-hub/Java-DSA.git/blob/main/ArrayEasyMediumHard/Easy/FindMissing.java) | 🟢 Easy | ✅ Done |
-| 2️⃣  | [Find the Number that Appears Once](git@github.com:karan-hub/Java-DSA.git/blob/main/ArrayEasyMediumHard/Easy/Findappearsonce.java) | 🟡 Medium | ✅ Done |
-| 3️⃣  | [Count Consecutive Ones](git@github.com:karan-hub/Java-DSA.git/blob/main/ArrayEasyMediumHard/Easy/CountConsecutiveOne.java) | 🟢 Easy | ✅ Done |
-| 4️⃣  | [Remove Duplicates](git@github.com:karan-hub/Java-DSA.git/blob/main/ArrayEasyMediumHard/Easy/RemoveDuplicates.java) | 🟢 Easy | ✅ Done |
-| 5️⃣  | [Rotate Array](git@github.com:karan-hub/Java-DSA.git/blob/main/ArrayEasyMediumHard/Easy/RotateArray.java) | 🟢 Easy | ✅ Done |
-| 6️⃣  | [Largest Element](git@github.com:karan-hub/Java-DSA.git/blob/main/ArrayEasyMediumHard/Easy/LargestElement.java) | 🟢 Easy | ✅ Done |
-| 7️⃣  | [Sorted Array Search](git@github.com:karan-hub/Java-DSA.git/blob/main/ArrayEasyMediumHard/Easy/SortedArraySearch.java) | 🟢 Easy | ✅ Done |
-| 8️⃣  | [Left Rotate Array by One](git@github.com:karan-hub/Java-DSA.git/blob/main/ArrayEasyMediumHard/Easy/LeftArraybyOne.java) | 🟢 Easy | ✅ Done |
-| 9️⃣  | [Second Largest Element](git@github.com:karan-hub/Java-DSA.git/blob/main/ArrayEasyMediumHard/Easy/SecondLargest.java) | 🟢 Easy | ✅ Done |
-| 🔟  | [Array is Sorted](git@github.com:karan-hub/Java-DSA.git/blob/main/ArrayEasyMediumHard/Easy/ArrayisSorted.java) | 🟢 Easy | ✅ Done |
-| 1️⃣1️⃣ | [Union of Sorted Arrays](git@github.com:karan-hub/Java-DSA.git/blob/main/ArrayEasyMediumHard/Easy/UnionOfSorted.java) | 🟡 Medium | ✅ Done |
-| 1️⃣2️⃣ | [Sum of Subarray](git@github.com:karan-hub/Java-DSA.git/blob/main/ArrayEasyMediumHard/Easy/SumOfSubArray.java) | 🟢 Easy | ✅ Done |
-| 1️⃣3️⃣ | [Move Zeroes](git@github.com:karan-hub/Java-DSA.git/blob/main/ArrayEasyMediumHard/Easy/MoveZeroes.java) | 🟢 Easy | ✅ Done |
-
+ 
 ---
 
 #### 🧠 **Lec 2: Build-up Logical Thinking**
