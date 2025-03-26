@@ -2,7 +2,9 @@ package Sort.CyclicSort;
 
 public class duplicates {
     public static void main(String[] args) {
-        
+        duplicates obj = new duplicates();
+        int[] arr = {1, 3, 4, 2, 2};
+        System.out.println("Duplicate number is: " + obj.find(arr));
         
     }
     public int find(int[] arr) {
