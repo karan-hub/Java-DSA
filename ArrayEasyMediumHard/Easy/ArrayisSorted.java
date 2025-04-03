@@ -11,7 +11,8 @@ public class ArrayisSorted {
 
     public static int isSorted(int n, int []a) {
         // Write your code here.
-        int result = 0;
+
+        int result = Integer.MIN_VALUE;
         for (int i =1 ; i < n; i++) {
             if (a[i] > a[i-1]|| a[i] == a[i-1]) {
             result = 1;
