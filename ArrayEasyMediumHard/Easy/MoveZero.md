@@ -127,14 +127,9 @@ We just **move the ready people to the front** (by swapping places), so **non-ze
 ---
 
 ## 📢 Code Tip
-Your logic is clean and efficient:  
 - Time: **O(n)**  
 - Space: **O(1)** (you’re doing it in-place)
 
 ---
 
-## ✨ Final Thoughts
-You’ve written an elegant program using a **two-pointer technique**. Great job!  
-Want to post this on LinkedIn? I can help you turn this into a visual post with diagrams too!
-
-Let me know if you'd like a Markdown `.md` file or a visual image too 📄📊
+ 
