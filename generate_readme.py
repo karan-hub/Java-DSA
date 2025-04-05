@@ -5,7 +5,7 @@ GITHUB_REPO_URL = "git@github.com:karan-hub/Java-DSA.git"
 
 def generate_readme(directory):
     readme_content = "# File Links\n\n"
-    for root, _, files in os.walk(directory):
+    for root, _, files in os.walk(directory ):
         for file in files:
             file_path = os.path.relpath(os.path.join(root, file), directory)
             github_link = f"{GITHUB_REPO_URL}/blob/main/{file_path}"
