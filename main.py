@@ -17,7 +17,7 @@ def generate_commit_message(files):
     messages = []
     for file in files:
         if file.endswith(".java"):
-            messages.append(f"🐍 Updated {file}")
+            messages.append(f"🛠️ Modified {file}")
         elif file.endswith(".py"):
             messages.append(f"🛠️ Modified {file}")
         elif file.endswith(".html") or file.endswith(".css"):
