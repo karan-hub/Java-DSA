@@ -13,7 +13,7 @@ public class RomanToInt {
         int len = s.length();
         int ans = 0;
         for (int i = 0; i < len; i++) {
-            if (i < len && getValue(s.charAt(i)) < getValue(s.charAt(i + 1)))
+            if ((i+1) < len && getValue(s.charAt(i)) < getValue(s.charAt(i + 1)))
                 ans = ans - getValue(s.charAt(i));
             else
                 ans = ans + getValue(s.charAt(i));
