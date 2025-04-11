@@ -1,4 +1,4 @@
-// package Step 1 : Learn the basics;
+package Basics;// package Step 1 : Learn the basics;
 
 public class IfElse {
     public static void main(String[] args) {

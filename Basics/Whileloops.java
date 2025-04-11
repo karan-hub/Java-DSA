@@ -1,4 +1,5 @@
-package Step 1 : Learn the basics;
+package Basics;
+import java.util.*;
 
 public class Whileloops {
     public static void main(String[] args) {

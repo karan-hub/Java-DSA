@@ -1,10 +1,11 @@
+package Basics;
+
 import java.util.Scanner;
 
 public class Forloops {
     public static void main(String[] args) {
         int nth = 6; // Example value
         int result = fib(nth);
-        Scanner
         System.out.println("The " + nth + "th Fibonacci number is: " + result);
     }
 
