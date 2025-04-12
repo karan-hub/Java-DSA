@@ -235,20 +235,20 @@ return true;
 ## 🔢 Time & Space Complexity
 
 ### ⏱ Time Complexity:  
-**O(n²)**
+**O(RecursionBasic²)**
 
-- Outer loop → `O(n)`
-- Inner loop (`list.contains`, `for-each`) → Worst case `O(n)`
-- Total: `O(n²)`
+- Outer loop → `O(RecursionBasic)`
+- Inner loop (`list.contains`, `for-each`) → Worst case `O(RecursionBasic)`
+- Total: `O(RecursionBasic²)`
 
-✅ Better approach: use `HashMap` to bring this to `O(n)`
+✅ Better approach: use `HashMap` to bring this to `O(RecursionBasic)`
 
 ---
 
 ### 🧠 Space Complexity:  
-**O(n)**
+**O(RecursionBasic)**
 
-- At most, `n` unique pairs stored in list.
+- At most, `RecursionBasic` unique pairs stored in list.
 
 ---
 
@@ -263,8 +263,8 @@ Map<Character, Character> mapTS = new HashMap<>();
 
 | Metric            | Complexity | Explanation |
 |-------------------|------------|-------------|
-| **Time**          | O(n)       | One pass through both strings with O(1) map access |
-| **Space**         | O(n)       | Two maps storing at most `n` entries |
+| **Time**          | O(RecursionBasic)       | One pass through both strings with O(1) map access |
+| **Space**         | O(RecursionBasic)       | Two maps storing at most `RecursionBasic` entries |
 
 💡 Example:
 - `"egg"` → `"add"`:
@@ -418,10 +418,10 @@ If no conflicting mappings found → return `true`
 
 | Complexity     | Explanation                        |
 |----------------|------------------------------------|
-| **Time: O(n)** | Loop through all characters once   |
-| **Space: O(n)**| At most 2 maps with `n` entries    |
+| **Time: O(RecursionBasic)** | Loop through all characters once   |
+| **Space: O(RecursionBasic)**| At most 2 maps with `RecursionBasic` entries    |
 
-✅ Much better than the previous `O(n²)` list-based approach.
+✅ Much better than the previous `O(RecursionBasic²)` list-based approach.
 
 ---
 
@@ -437,8 +437,8 @@ If no conflicting mappings found → return `true`
 
 | Feature              | List Approach     | Map Approach         |
 |----------------------|------------------|-----------------------|
-| Time Complexity      | O(n²)            | ✅ O(n)               |
-| Space Complexity     | O(n)             | ✅ O(n)               |
+| Time Complexity      | O(RecursionBasic²)            | ✅ O(RecursionBasic)               |
+| Space Complexity     | O(RecursionBasic)             | ✅ O(RecursionBasic)               |
 | Readability          | Medium           | ✅ High               |
 | Use Case             | Learning logic   | ✅ Real-world usage   |
 
@@ -450,8 +450,8 @@ If no conflicting mappings found → return `true`
 
 | Approach     | Time Complexity | Space Complexity | Suitable For |
 |--------------|------------------|------------------|----------------|
-| ArrayList    | O(n²)            | O(n)             | Simple logic, no maps |
-| Map-based    | O(n)             | O(n)             | Optimal, scalable |
+| ArrayList    | O(RecursionBasic²)            | O(RecursionBasic)             | Simple logic, no maps |
+| Map-based    | O(RecursionBasic)             | O(RecursionBasic)             | Optimal, scalable |
 
 ---
  

@@ -127,7 +127,7 @@ We just **move the ready people to the front** (by swapping places), so **non-ze
 ---
 
 ## 📢 Code Tip
-- Time: **O(n)**  
+- Time: **O(RecursionBasic)**  
 - Space: **O(1)** (you’re doing it in-place)
 
 ---
