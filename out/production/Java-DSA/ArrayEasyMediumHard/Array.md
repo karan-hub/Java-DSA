@@ -68,7 +68,7 @@ number
 **Heap:**
 
 ```
-{n[0], n[1], n[2], n[3], n[4], n[5]}
+{RecursionBasic[0], RecursionBasic[1], RecursionBasic[2], RecursionBasic[3], RecursionBasic[4], RecursionBasic[5]}
 ```
 
 *If these reference variables have nothing to point to, they will return `null` when accessed.*

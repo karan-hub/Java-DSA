@@ -158,14 +158,14 @@ System.out.println(obj.removeOuterParentheses("(()())(())(()(()))"));
 ✅ Skips outermost `()`  
 ✅ Builds result only with inner brackets  
 
-**Time Complexity:** O(n) - We traverse the string once.  
+**Time Complexity:** O(RecursionBasic) - We traverse the string once.  
 **Space Complexity:** O(1) - Only a counter and a `StringBuilder` are used.
 
 ### Stack-Based Approach:
 ✅ Uses a stack to track parentheses  
 ✅ Adds to result only when stack is not empty  
 
-**Time Complexity:** O(n) - We traverse the string once.  
-**Space Complexity:** O(n) - Stack space depends on the depth of nested parentheses.
+**Time Complexity:** O(RecursionBasic) - We traverse the string once.  
+**Space Complexity:** O(RecursionBasic) - Stack space depends on the depth of nested parentheses.
 
 ---

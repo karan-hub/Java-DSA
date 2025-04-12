@@ -1,9 +1,9 @@
 # Majority Elements II
  markdown
-# 🔍 Find All Majority Elements (Appearing More Than ⌊n/3⌋ Times)
+# 🔍 Find All Majority Elements (Appearing More Than ⌊RecursionBasic/3⌋ Times)
 
 ## 🚀 Problem Statement
-Given an array of size `n`, find **all elements that appear more than ⌊n/3⌋ times**.
+Given an array of size `RecursionBasic`, find **all elements that appear more than ⌊RecursionBasic/3⌋ times**.
 
 ➡️ You are allowed to use only `O(1)` space (excluding the result list).
 
@@ -11,18 +11,18 @@ Given an array of size `n`, find **all elements that appear more than ⌊n/3⌋ 
 
 ## 💡 Intuition & Concept
 
-You can **have at most 2 elements** that appear more than ⌊n/3⌋ times.
+You can **have at most 2 elements** that appear more than ⌊RecursionBasic/3⌋ times.
 
 Why?
 
-Let’s say we had 3 elements that appeared more than n/3 times.
+Let’s say we had 3 elements that appeared more than RecursionBasic/3 times.
 
-Then their **combined count would be > n**, which is impossible.  
+Then their **combined count would be > RecursionBasic**, which is impossible.  
 Hence, there can be **at most 2 majority elements** in this case.
 
 ---
 
-## 🧠 Algorithm – Boyer-Moore Majority Voting (Extended for n/3)
+## 🧠 Algorithm – Boyer-Moore Majority Voting (Extended for RecursionBasic/3)
 
 ### ✅ Step-by-step logic:
 
@@ -32,7 +32,7 @@ Hence, there can be **at most 2 majority elements** in this case.
 2. **Second pass:**  
    Count the actual occurrences of these two candidates.
 
-3. **Return the ones whose count > ⌊n/3⌋**.
+3. **Return the ones whose count > ⌊RecursionBasic/3⌋**.
 
 ---
 
@@ -65,7 +65,7 @@ Final candidates = `num1 = 1`, `num2 = 2`
 ### Second pass:
 - Count 1 = 3
 - Count 2 = 3
-- n = 8 → ⌊n/3⌋ = 2
+- RecursionBasic = 8 → ⌊RecursionBasic/3⌋ = 2
 
 ✅ Both `1` and `2` are valid answers.
 
@@ -78,7 +78,7 @@ class Solution {
     public List<Integer> findMajority(int[] nums) {
         int num1 = -1, num2 = -1;
         int frq1 = 0, frq2 = 0;
-        int n = nums.length;
+        int RecursionBasic = nums.length;
 
         for (int num : nums) {
             if (num == num1) {
@@ -105,7 +105,7 @@ class Solution {
         }
 
         List<Integer> result = new ArrayList<>();
-        int threshold = n / 3;
+        int threshold = RecursionBasic / 3;
         if (count1 > threshold) result.add(num1);
         if (count2 > threshold) result.add(num2);
 
@@ -121,7 +121,7 @@ class Solution {
 
 | Complexity | Value        |
 |------------|--------------|
-| ⏱️ Time     | `O(n)`       |
+| ⏱️ Time     | `O(RecursionBasic)`       |
 | 💾 Space    | `O(1)` extra (excluding result list) |
 
 ---
@@ -150,8 +150,8 @@ Output: []
 
 ## 📝 Key Takeaways
 
-- If the majority threshold is `n/2`, you can have only 1 majority element.
-- If the threshold is `n/3`, you can have **at most 2**.
+- If the majority threshold is `RecursionBasic/2`, you can have only 1 majority element.
+- If the threshold is `RecursionBasic/3`, you can have **at most 2**.
 - Boyer-Moore Voting is powerful for constant space majority element search.
 
 ---

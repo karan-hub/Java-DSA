@@ -61,7 +61,7 @@ Modified nums = [1, 2, 3, 4, 5, _, _, _]
 ## ⏳ Complexity Analysis:
 | Time Complexity | Space Complexity |
 |----------------|----------------|
-| **O(n)** (Single pass through array) | **O(1)** (In-place modification) |
+| **O(RecursionBasic)** (Single pass through array) | **O(1)** (In-place modification) |
 
 ### 🔥 Why This Works Well?
 ✅ **Efficient:** Uses only a single loop (linear time).

@@ -94,7 +94,7 @@ arr = [-2, 1, -3, 4]
 ### ⏱️ Time Complexity
 
 ```
-O(n) — Only one pass through the array.
+O(RecursionBasic) — Only one pass through the array.
 ```
 
 ---

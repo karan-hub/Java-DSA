@@ -78,11 +78,11 @@ Final result:
 
 ```java
 void nextPermutation(int[] arr) {
-    int n = arr.length;
+    int RecursionBasic = arr.length;
     int pivot = -1;
 
     // Step 1: Find pivot
-    for (int i = n - 2; i >= 0; i--) {
+    for (int i = RecursionBasic - 2; i >= 0; i--) {
         if (arr[i] < arr[i + 1]) {
             pivot = i;
             break;
@@ -91,12 +91,12 @@ void nextPermutation(int[] arr) {
 
     // Step 2: If no pivot, reverse whole array
     if (pivot == -1) {
-        reverse(arr, 0, n - 1);
+        reverse(arr, 0, RecursionBasic - 1);
         return;
     }
 
     // Step 3: Find next greater element to the right of pivot
-    for (int i = n - 1; i > pivot; i--) {
+    for (int i = RecursionBasic - 1; i > pivot; i--) {
         if (arr[i] > arr[pivot]) {
             swap(arr, i, pivot);
             break;
@@ -104,7 +104,7 @@ void nextPermutation(int[] arr) {
     }
 
     // Step 4: Reverse the part after pivot
-    reverse(arr, pivot + 1, n - 1);
+    reverse(arr, pivot + 1, RecursionBasic - 1);
 }
 
 void reverse(int[] arr, int start, int end) {
@@ -128,7 +128,7 @@ void swap(int[] arr, int i, int j) {
 
 | Complexity | Value        | Explanation                                      |
 |------------|--------------|--------------------------------------------------|
-| Time       | O(n)         | One pass to find pivot + one pass to reverse     |
+| Time       | O(RecursionBasic)         | One pass to find pivot + one pass to reverse     |
 | Space      | O(1)         | In-place manipulation of the array               |
 
 ---

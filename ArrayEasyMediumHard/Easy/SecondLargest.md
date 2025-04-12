@@ -11,10 +11,10 @@ This Java program demonstrates multiple approaches to find the **second largest 
 ### 🛠️ Approaches Overview:
 | Approach                | Time Complexity | Space Complexity | Key Idea                                                                 |
 |-------------------------|-----------------|------------------|--------------------------------------------------------------------------|
-| **Brute Force (Sorting)** | `O(n log n)`    | `O(1)`           | Sort the array and pick the second last element.                         |
-| **Brute Force 2 (Two-Pass)** | `O(n)`         | `O(1)`           | Find the largest in the first pass, then find the second largest.         |
-| **Better Approach**      | `O(n)`         | `O(1)`           | Track the largest and second largest in a single pass.                   |
-| **Optimal Approach**     | `O(n)`         | `O(1)`           | Track both the largest and smallest elements in a single pass.           |
+| **Brute Force (Sorting)** | `O(RecursionBasic log RecursionBasic)`    | `O(1)`           | Sort the array and pick the second last element.                         |
+| **Brute Force 2 (Two-Pass)** | `O(RecursionBasic)`         | `O(1)`           | Find the largest in the first pass, then find the second largest.         |
+| **Better Approach**      | `O(RecursionBasic)`         | `O(1)`           | Track the largest and second largest in a single pass.                   |
+| **Optimal Approach**     | `O(RecursionBasic)`         | `O(1)`           | Track both the largest and smallest elements in a single pass.           |
 
 ---
 
@@ -42,7 +42,7 @@ public class BruteForceSecondLargest {
 }
 ```
 
-**🕒 Time Complexity:** `O(n log n)` due to sorting.
+**🕒 Time Complexity:** `O(RecursionBasic log RecursionBasic)` due to sorting.
 
 ---
 
@@ -81,7 +81,7 @@ public class BruteForce2SecondLargest {
 }
 ```
 
-**🕒 Time Complexity:** `O(n)`.
+**🕒 Time Complexity:** `O(RecursionBasic)`.
 
 ---
 
@@ -117,7 +117,7 @@ public class BetterSecondLargest {
 }
 ```
 
-**🕒 Time Complexity:** `O(n)`.
+**🕒 Time Complexity:** `O(RecursionBasic)`.
 
 ---
 
@@ -162,7 +162,7 @@ public class OptimalSecondLargest {
 }
 ```
 
-**🕒 Time Complexity:** `O(n)`, **Space Complexity:** `O(1)`.
+**🕒 Time Complexity:** `O(RecursionBasic)`, **Space Complexity:** `O(1)`.
 
 ---
 

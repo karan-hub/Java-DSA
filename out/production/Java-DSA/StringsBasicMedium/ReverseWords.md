@@ -171,8 +171,8 @@ Clean and nicely spaced!
 ---
 
 ## 📊 Complexity Analysis
-- **Time Complexity**: O(n), where `n` is the length of the input string.
-- **Space Complexity**: O(n), for the `StringBuilder` and split array.
+- **Time Complexity**: O(RecursionBasic), where `RecursionBasic` is the length of the input string.
+- **Space Complexity**: O(RecursionBasic), for the `StringBuilder` and split array.
 
 ---
  

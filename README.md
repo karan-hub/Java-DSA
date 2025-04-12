@@ -117,7 +117,7 @@
 |-----|-----------------------------------------------------|-------------------|---------------|
 | 1️⃣  | 2Sum Problem                                       | 🟡 Medium         | ✅ Done       |
 | 2️⃣  | Sort an array of 0's, 1's, and 2's                 | 🟡 Medium         | ✅ Done       |
-| 3️⃣  | Majority Element (>n/2 times)                      | 🟢 Easy           | ✅ Done       |
+| 3️⃣  | Majority Element (>RecursionBasic/2 times)                      | 🟢 Easy           | ✅ Done       |
 | 4️⃣  | Kadane's Algorithm                                 | 🟢 Easy           | ✅ Done       |
 | 5️⃣  | Print subarray with maximum subarray sum           | 🟡 Medium         | ✅ Done       |
 | 6️⃣  | Stock Buy and Sell                                 | 🟢 Easy           | ✅ Done       |
@@ -138,7 +138,7 @@
 | 🔢  | 📝 **Topic**                                         | 🎯 **Difficulty** | ✅ **Status** |
 |-----|-----------------------------------------------------|-------------------|---------------|
 | 1️⃣  | Pascal's Triangle                                  | 🟡 Medium         | ✅ Done       |
-| 2️⃣  | Majority Element (n/3 times)                       | 🟡 Medium         | ✅ Done       |
+| 2️⃣  | Majority Element (RecursionBasic/3 times)                       | 🟡 Medium         | ✅ Done       |
 | 3️⃣  | 3-Sum Problem                                      | 🟡 Medium         | ✅ Done       |
 | 4️⃣  | 4-Sum Problem                                      | 🔴 Hard           | ✅ Done       |
 | 5️⃣  | Largest Subarray with 0 Sum                        | 🟡 Medium         | ✅ Done       |
@@ -177,7 +177,7 @@
 
 | 🔢  | 📝 **Topic**                                         | 🎯 **Difficulty** | ✅ **Status** |
 |-----|-----------------------------------------------------|-------------------|---------------|
-| 1️⃣  | Find square root of a number in log n              | 🟡 Medium         | ✅ Done       |
+| 1️⃣  | Find square root of a number in log RecursionBasic              | 🟡 Medium         | ✅ Done       |
 | 2️⃣  | Find the Nth root of a number using binary search  | 🟡 Medium         | ✅ Done       |
 | 3️⃣  | Koko Eating Bananas                                | 🟡 Medium         | ✅ Done       |
 

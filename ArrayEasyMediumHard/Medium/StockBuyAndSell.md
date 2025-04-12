@@ -82,7 +82,7 @@ public int maximumProfit(int prices[]) {
 ### ⏱️ Time Complexity
 
 ```
-O(n) — Single loop through the prices array
+O(RecursionBasic) — Single loop through the prices array
 ```
 
 ---

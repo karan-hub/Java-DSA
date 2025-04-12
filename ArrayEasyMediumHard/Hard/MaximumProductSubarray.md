@@ -4,7 +4,7 @@
 
 ## 🔍 Problem Statement
 
-Given an integer array `arr[]` of size `n`, find the **contiguous subarray** within the array that has the **largest product**.
+Given an integer array `arr[]` of size `RecursionBasic`, find the **contiguous subarray** within the array that has the **largest product**.
 
 ---
 
@@ -45,9 +45,9 @@ class Solution {
     int maxProduct(int[] arr) {
         int max = Integer.MIN_VALUE;
         int fromStart = 1, fromEnd = 1;
-        int n = arr.length;
+        int RecursionBasic = arr.length;
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < RecursionBasic; i++) {
             // Reset to 1 if product becomes 0
             if (fromStart == 0) fromStart = 1;
             if (fromEnd == 0) fromEnd = 1;
@@ -56,7 +56,7 @@ class Solution {
             fromStart *= arr[i];
 
             // Right to left product
-            fromEnd *= arr[n - 1 - i];
+            fromEnd *= arr[RecursionBasic - 1 - i];
 
             // Update max so far
             max = Math.max(max, Math.max(fromStart, fromEnd));
@@ -220,7 +220,7 @@ currentMin = -2
 ## 📌 Full Flow Summary:
 
 1. Initialize first element as base values.
-2. Traverse array from 1 to n-1:
+2. Traverse array from 1 to RecursionBasic-1:
    - If negative → swap max/min.
    - Update `currentMax`, `currentMin` using `Math.max/min`.
    - Update `overallMaxProduct`.

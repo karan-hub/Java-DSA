@@ -156,8 +156,8 @@ For input: `"bbbaaacc"`
 
 | Metric | Value |
 |--------|-------|
-| 🕒 Time Complexity | **O(n)** — One pass for frequency counting, one for bucket filling, and one for result generation. |
-| 💾 Space Complexity | **O(n)** — For frequency map and bucket array. |
+| 🕒 Time Complexity | **O(RecursionBasic)** — One pass for frequency counting, one for bucket filling, and one for result generation. |
+| 💾 Space Complexity | **O(RecursionBasic)** — For frequency map and bucket array. |
 
 ---
 

@@ -8,7 +8,7 @@ This solution finds the **maximum total profit** from multiple buy-sell transact
 
 ### 🔍 Problem Statement
 
-> Given an array `prices[]` representing stock prices on `n` consecutive days,  
+> Given an array `prices[]` representing stock prices on `RecursionBasic` consecutive days,  
 > You can **buy and sell multiple times**.  
 > Find the **maximum profit** you can make.  
 > (You **cannot hold more than one stock at a time**.)
@@ -42,8 +42,8 @@ int[] prices = {1, 5, 3, 8, 12};
 ```java
 public int maximumProfit(int prices[]) {
     int MaxProfit = 0;
-    int n = prices.length;
-    for (int i = 1; i < n; i++) {
+    int RecursionBasic = prices.length;
+    for (int i = 1; i < RecursionBasic; i++) {
         if (prices[i] > prices[i - 1])
             MaxProfit += prices[i] - prices[i - 1];
     }
@@ -79,7 +79,7 @@ Input: `{1, 5, 3, 8, 12}`
 
 | Metric            | Value         |
 |-------------------|----------------|
-| **Time Complexity** | `O(n)`         |
+| **Time Complexity** | `O(RecursionBasic)`         |
 | **Space Complexity**| `O(1)`         |
 
 ---

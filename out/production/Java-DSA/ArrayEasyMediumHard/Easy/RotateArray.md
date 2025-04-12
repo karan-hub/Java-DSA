@@ -53,8 +53,8 @@ BruteForce(nums, k);
 ```
 
 **Complexity:**
-- ⏱️ Time Complexity: **O(n)**
-- 🗂️ Space Complexity: **O(n)** (uses extra array)
+- ⏱️ Time Complexity: **O(RecursionBasic)**
+- 🗂️ Space Complexity: **O(RecursionBasic)** (uses extra array)
 
 ---
 
@@ -100,7 +100,7 @@ BruteForce2(nums, k);
 ```
 
 **Complexity:**
-- ⏱️ Time Complexity: **O(n * k)** (inefficient for large `k`)
+- ⏱️ Time Complexity: **O(RecursionBasic * k)** (inefficient for large `k`)
 - 🗂️ Space Complexity: **O(1)** (modifies in-place)
 
 ---
@@ -151,7 +151,7 @@ Optimal(nums, k);
 ```
 
 **Complexity:**
-- ⏱️ Time Complexity: **O(n)**
+- ⏱️ Time Complexity: **O(RecursionBasic)**
 - 🗂️ Space Complexity: **O(1)** (in-place modification)
 
 ---
@@ -159,5 +159,5 @@ Optimal(nums, k);
 ## 🔑 Key Takeaways
 - The **💡 brute force approach** (extra array) is simple but uses extra space.
 - The **🔧 in-place shifting** is inefficient for large rotations.
-- The **🚀 optimal approach** is the best choice, with **O(n) time and O(1) space**.
+- The **🚀 optimal approach** is the best choice, with **O(RecursionBasic) time and O(1) space**.
 

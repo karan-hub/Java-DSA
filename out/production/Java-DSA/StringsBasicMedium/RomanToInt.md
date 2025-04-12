@@ -131,7 +131,7 @@ int result = switch (ch) {
 
 | Type | Value |
 |------|-------|
-| ⏰ Time | O(n) — we traverse each character once |
+| ⏰ Time | O(RecursionBasic) — we traverse each character once |
 | 🧠 Space | O(1) — no extra space except variables |
 
 ---

@@ -12,7 +12,7 @@ Given an unsorted integer array, find the **smallest positive number** that is *
 
 ### 🧠 Intuition:
 
-We try to **place each positive integer `x` (1 to n)** at the index `x - 1` in the array.  
+We try to **place each positive integer `x` (1 to RecursionBasic)** at the index `x - 1` in the array.  
 If a number is already at the right place, we move on.  
 Finally, we scan the array and return the **first index `i`** where `arr[i] != i + 1`.
 
@@ -22,11 +22,11 @@ Finally, we scan the array and return the **first index `i`** where `arr[i] != i
 
 ```java
 public int missingNumber(int[] arr) {
-    int n = arr.length;
+    int RecursionBasic = arr.length;
 
-    // Step 1: Place each number at its correct index if in range 1 to n
-    for (int i = 0; i < n; i++) {
-        while (arr[i] > 0 && arr[i] <= n && arr[arr[i] - 1] != arr[i]) {
+    // Step 1: Place each number at its correct index if in range 1 to RecursionBasic
+    for (int i = 0; i < RecursionBasic; i++) {
+        while (arr[i] > 0 && arr[i] <= RecursionBasic && arr[arr[i] - 1] != arr[i]) {
             int correctIndex = arr[i] - 1;
             int temp = arr[i];
             arr[i] = arr[correctIndex];
@@ -35,12 +35,12 @@ public int missingNumber(int[] arr) {
     }
 
     // Step 2: Find the first index where arr[i] != i + 1
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < RecursionBasic; i++) {
         if (arr[i] != i + 1) return i + 1;
     }
 
-    // Step 3: If all numbers are in place, return n+1
-    return n + 1;
+    // Step 3: If all numbers are in place, return RecursionBasic+1
+    return RecursionBasic + 1;
 }
 ```
 
@@ -85,14 +85,14 @@ Now final array:
 
 | Metric            | Value                        |
 |-------------------|------------------------------|
-| 🕒 Time Complexity | O(n) *(best & worst case)*   |
+| 🕒 Time Complexity | O(RecursionBasic) *(best & worst case)*   |
 | 🧠 Space Complexity| O(1) *(in-place modification)* |
 
 ---
 
 ## ✨ Key Points
 
-- Ignore negative, zero, and out-of-bound values (> n)
+- Ignore negative, zero, and out-of-bound values (> RecursionBasic)
 - Place numbers at correct indices `arr[i] - 1`
 - Final pass gives the smallest missing number
 
