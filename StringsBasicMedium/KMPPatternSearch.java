@@ -1,5 +1,6 @@
 package StringsBasicMedium;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class KMPPatternSearch {
@@ -32,10 +33,11 @@ public class KMPPatternSearch {
          return  lps;
     }
 
-    public static void KMPSearch(String text, String pattern){
+    public static ArrayList<Integer> KMPSearch(String text, String pattern){
         int [] lps=  computeLPSArray(pattern);
         int i =0 ;  //  for text
         int j =0;// for pattern
+        ArrayList<Integer> list = new ArrayList<>();
 
         while (i<text.length()){
             if (pattern.charAt(j) == text.charAt(i)) {
@@ -44,13 +46,14 @@ public class KMPPatternSearch {
             }
             if (j == pattern.length()){
                 System.out.println("Pattern found at index " + (i - j));
+                list.add(j-1);
                 j = lps[j-1];
              }else if ( i< text.length() && pattern.charAt(j) != text.charAt(i)){
                 if (j!=0) j =lps[j-1];
                 else i++;
             }
         }
-
+    return list;
      }
 
 }
