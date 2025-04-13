@@ -12,9 +12,9 @@ public class StepstoReduceZero {
 
     public static  int helper(int num , int step) {
         if (num==0) return step;
-        if (num %2 == 0) return  helper(num/2 ,++step);
-        else return  helper(num-1 ,++step);
-
+        return  (num %2 == 0)
+                ? helper(num/2 ,++step)
+                : helper(num-1 ,++step);
     }
 
 }
