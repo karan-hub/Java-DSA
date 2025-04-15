@@ -45,7 +45,7 @@ public class KMPPatternSearch {
                 j++;
             }
             if (j == pattern.length()){
-                System.out.println("Pattern found at index " + (i - j));
+//                System.out.println("Pattern found at index " + (i - j));
                 list.add(j-1);
                 j = lps[j-1];
              }else if ( i< text.length() && pattern.charAt(j) != text.charAt(i)){

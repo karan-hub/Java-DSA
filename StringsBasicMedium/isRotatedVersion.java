@@ -1,11 +1,16 @@
 package StringsBasicMedium;
 
+import java.util.Arrays;
+
 public class isRotatedVersion {
     public static void main(String[] args) {
 //        System.out.println(manualRatationCheck("hello", "hellm"));
 
-        System.out.println(subStringCheck("hello" , "llohe"));
+//        System.out.println(subStringCheck("hello" , "llohe"));
+        String pattern = "aaaabaacd";
+        System.out.println(Arrays.toString(computeLPSArray(pattern)));
     }
+
 
      static  boolean  manualRatationCheck(String original , String rorated ){
         if (original.length() !=  rorated.length()) return   false ;
@@ -48,6 +53,26 @@ public class isRotatedVersion {
         return  isRoatated;
     }
 
+    public static int[] computeLPSArray(String pattern){
+        int [] lps  = new int[pattern.length()];
+        int len =0;
+        int i = 1;
+
+        while (i<pattern.length()){
+            if (pattern.charAt(i)== pattern.charAt(len)){
+                len++;
+                lps[i]= len;
+                i++;
+            }else {
+                if (len != 0 ) len = lps[len -1];
+                else {
+                    lps[i]=0;
+                    i++;
+                }
+            }
+        }
+        return  lps;
+    }
 
 
     }
