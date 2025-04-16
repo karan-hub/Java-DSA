@@ -3,6 +3,7 @@ package RecursionBasic;
 public class power {
     public static void main(String[] args) {
 
+        System.out.println(pow(2 ,-2.0));
     }
 
     static  double pow(double x , double n){
@@ -21,7 +22,7 @@ public class power {
         if (power ==0){
             return  result;
         }
-        if ( base %2==1) return helper(power -1 , base ,result*base);
-        else  return helper(power/2 ,base*2 ,result);
+        if ( power %2==1) return helper(power -1 , base ,result*base);
+        else  return helper(power/2 ,base*base ,result);
     }
 }
