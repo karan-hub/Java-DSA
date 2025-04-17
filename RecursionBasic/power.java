@@ -9,7 +9,7 @@ public class power {
     static  double pow(double x , double n){
         double result =1.0;
         double base = x;
-        double power =n;
+        long power =(long) n;
 
         if (power <0){
             base = 1.0/base;
@@ -18,7 +18,7 @@ public class power {
         return   helper(power ,base ,result);
 
     }
-    static  double helper(double power , double base ,  double result){
+    static  double helper(long power , double base ,  double result){
         if (power ==0){
             return  result;
         }
