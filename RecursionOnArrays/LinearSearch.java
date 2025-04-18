@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class LinearSearch {
     public static void main(String[] args) {
         System.out.println(findIndex(new int[]{1,2,13,4,5}, 0 , 13 ));
-        findAllIndex(new int[]{1,2,2 ,13,4,5}, 0 , 2 );
+        ListAllIndex(new int[]{1,2,2 ,13,4,5}, 0 , 2 , new ArrayList<>() );
         System.out.println(list);
 
     }
@@ -27,5 +27,10 @@ public class LinearSearch {
         else if (arr[index] == target)  list.add(index);
         findAllIndex(arr ,++index ,target);
 
+    }
+    static   ArrayList<Integer> ListAllIndex(int [] arr , int index , int target , ArrayList<Integer> result){
+        if (index == arr.length)  return  result ;
+        if (arr[index] == target)  result.add(index);
+        return   ListAllIndex(arr ,++index ,target , list);
     }
 }
