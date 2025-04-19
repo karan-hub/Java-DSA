@@ -6,16 +6,18 @@ import java.util.Arrays;
 public class SetMatrixZeros {
 
     public static void main(String[] args) {
-        ArrayList<ArrayList<Integer>> matrix = new ArrayList<>();
-        matrix.add(new ArrayList<>(Arrays.asList(1, 2, 3)));
-        matrix.add(new ArrayList<>(Arrays.asList(4, 0, 6)));
-        matrix.add(new ArrayList<>(Arrays.asList(7, 8, 9)));
+//        ArrayList<ArrayList<Integer>> matrix = new ArrayList<>();
+//        matrix.add(new ArrayList<>(Arrays.asList(1, 2, 3)));
+//        matrix.add(new ArrayList<>(Arrays.asList(4, 0, 6)));
+//        matrix.add(new ArrayList<>(Arrays.asList(7, 8, 9)));
 
-        ArrayList<ArrayList<Integer>> result = optimalApproach(matrix);
+        int[][] arr= new int [][] {{1,1,1},{1,0,1},{1,1,1}};
 
-        for (ArrayList<Integer> row : result) {
-            System.out.println(row);
-        }
+        int [][] result = batterApproch(arr);
+
+//        for (ArrayList<Integer> row : result) {
+//            System.out.println(row);
+//        }
 
     }
 
