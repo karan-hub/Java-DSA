@@ -1,3 +1,5 @@
+package RecursionBasic;
+
 public class Trangle {
     public static void main(String[] args) {
         printTrangle2(4,0);
