@@ -6,7 +6,7 @@ public class MargeSort {
     public static void main(String[] args) {
         int [] arr = {5,2,1,8};
 //        arr= Sort(arr);
-//        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr));
         InplaceSort(arr , 0 , arr.length);
         System.out.println(Arrays.toString(arr));
 
