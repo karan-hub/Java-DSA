@@ -6,7 +6,7 @@ public class MargeSort {
     public static void main(String[] args) {
         int [] arr = {5,2,1,8};
 //        arr= Sort(arr);
-        System.out.println(Arrays.toString(arr));
+//        System.out.println(Arrays.toString(arr));
         InplaceSort(arr , 0 , arr.length);
         System.out.println(Arrays.toString(arr));
 
@@ -23,7 +23,7 @@ public class MargeSort {
         return Marge(left , right);
     }
 
-    static  int[] Marge(int []left , int [] right ){
+    public static  int[] Marge(int[] left, int[] right){
         int [] mix = new int[left.length + right.length];
 
         int i=0,j=0,k=0;
@@ -93,6 +93,9 @@ public class MargeSort {
         }
 
         System.arraycopy(mix, 0, arr, 0 + start, mix.length);
+//        for (int l = 0; l < mix.length; l++) {
+//            arr[l+start]  = mix[l];
+//        }
 
 
     }
