@@ -1,6 +1,7 @@
 package Sort.QuickSort;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class QuickSort {
     public static void main(String[] args) {
@@ -18,10 +19,13 @@ public class QuickSort {
             quickSort(nums, pivot+1, end);
         }
     }
+    static Random rand = new Random();
 
     static   int partition (int [] arr , int start , int end ){
-        int pivot  =  arr[end];
+//        int pivot  =  arr[end];
+        int pivot = rand.nextInt(end-start+1)+start;
         int  i= start-1;
+
 
         for (int j = start; j < end; j++) {
             if (arr[j] < pivot){
