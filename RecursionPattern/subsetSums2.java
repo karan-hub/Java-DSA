@@ -33,7 +33,6 @@ public class subsetSums2 {
 
             //   Skip duplicates
 
-
             ds.add(nums[index]);
             helper(nums, index + 1, ans, ds);
             ds.remove(ds.size() - 1);
