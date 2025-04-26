@@ -12,10 +12,10 @@ public class QuickSort {
     public static  void  quickSort(int[] nums , int start , int end) {
 
         if (start < end){
-            int pivote = partition(nums  , start , end) ;
+            int pivot = partition(nums  , start , end) ;
 
-            quickSort(nums, start, pivote-1);
-            quickSort(nums, pivote+1, end);
+            quickSort(nums, start, pivot-1);
+            quickSort(nums, pivot+1, end);
         }
     }
 
