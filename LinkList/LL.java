@@ -98,6 +98,17 @@ public class LL {
         return  tail.value;
     }
 
+    public  Node find(int value){
+        Node  currentNode = head ;
+        while (currentNode != null){
+            if (currentNode.value ==  value){
+                return  currentNode ;
+            }
+            currentNode=  currentNode.next;
+        }
+        return  null;
+    }
+
     private  class  Node{
         private  int value ;
         Node next ;
