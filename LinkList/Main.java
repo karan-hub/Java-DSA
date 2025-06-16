@@ -10,6 +10,7 @@ public class Main {
         link.inserFrist(130);
         link.inserFrist(140);
 
+        link.insertLast(140);
         link.display();
 
 

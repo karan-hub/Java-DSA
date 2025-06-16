@@ -1,10 +1,12 @@
 package LinkList;
 
+import RecursionPattern.BinarySubStrings;
+
 public class LL {
 
     private  Node head ;
     private  Node tail ;
-    private  int size  ;
+    public  int size  ;
 
     public  LL(){
         this.size = 0 ;
@@ -19,6 +21,15 @@ public class LL {
             tail = head;
 
         size ++;
+    }
+
+    public void  insertLast(int value) {
+        Node  node = new Node(value);
+        tail.next = node ;
+        tail = node ;
+        if (head == null)
+            head =  tail ;
+        size ++ ;
     }
 
     public  void  display(){
