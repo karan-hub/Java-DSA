@@ -70,6 +70,24 @@ public class LL {
         size ++ ;
     }
 
+    public  int deletFrist(){
+        int value = head.value ;
+        head = head.next ;
+        if (head == null)
+            tail = null;
+        size--;
+        return value ;
+    }
+
+    public  int deletAt(int idx){
+        Node  currentNode = head ;
+        for (int i = 1; i < idx; i++)
+            currentNode=  currentNode.next;
+        int value=  currentNode.next.value ;
+        currentNode.next = currentNode.next.next;
+        return  value;
+    }
+
     private  class  Node{
         private  int value ;
         Node next ;
