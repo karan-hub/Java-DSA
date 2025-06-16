@@ -9,8 +9,10 @@ public class Main {
         link.inserFrist(120);
         link.inserFrist(130);
         link.inserFrist(140);
-
-        link.insertLast(140);
+        link.insertLast(99);
+        link.display();
+        System.out.println();
+        link.insertAt(10000 , 3000);
         link.display();
 
 

@@ -24,11 +24,15 @@ public class LL {
     }
 
     public void  insertLast(int value) {
+        if (tail == null){
+            inserFrist(value);
+            return;
+        }
+
         Node  node = new Node(value);
         tail.next = node ;
         tail = node ;
-        if (head == null)
-            head =  tail ;
+
         size ++ ;
     }
 
@@ -41,7 +45,30 @@ public class LL {
 
     }
 
+    public  void  insertAt(int value , int idx){
+        if (idx == 0){
+            inserFrist(value);
+            return;
+        } else if (idx == size) {
+            insertLast(value);
+            return;
+        }
 
+        int currentIdx = 1 ;
+        Node currentNode = head ;
+        while (currentIdx < idx) {
+            try{
+                currentNode =  currentNode.next;
+            }catch (NullPointerException e){
+                System.out.println(e.getMessage());
+                return;
+            }
+            currentIdx ++;
+        }
+        Node  node  = new Node(value , currentNode.next);
+        currentNode.next  = node ;
+        size ++ ;
+    }
 
     private  class  Node{
         private  int value ;
