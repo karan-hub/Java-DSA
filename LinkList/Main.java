@@ -21,6 +21,9 @@ public class Main {
         System.out.println("\n\n============= Delet At =============");
         link.deletAt(3);
         link.display();
+        System.out.println("\n\n============= Delet last =============");
+        link.deletLast();
+        link.display();
 
 
 

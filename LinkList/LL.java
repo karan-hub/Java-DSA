@@ -88,6 +88,16 @@ public class LL {
         return  value;
     }
 
+    public  int deletLast(){
+        Node  currentNode = head ;
+        for (int i = 1; i < size-2; i++)
+            currentNode=  currentNode.next;
+        tail = currentNode ;
+        tail.next  = null ;
+        size--;
+        return  tail.value;
+    }
+
     private  class  Node{
         private  int value ;
         Node next ;
