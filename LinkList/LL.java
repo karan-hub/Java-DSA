@@ -4,14 +4,19 @@ import RecursionPattern.BinarySubStrings;
 
 public class LL {
 
-    private  Node head ;
-    private  Node tail ;
-    public  int size  ;
+    private    Node head ;
+    private    Node tail ;
+    protected   int size  ;
 
+    public  Node getHead(){
+        return head;
+    }
     public  LL(){
         this.size = 0 ;
     }
-
+    public  LL (Node node){
+        this.head = node;
+    }
     public void  inserFrist(int value){
         Node node = new Node(value) ;
         node.next = head ;
@@ -22,7 +27,6 @@ public class LL {
 
         size ++;
     }
-
     public void  insertLast(int value) {
         if (tail == null){
             inserFrist(value);
@@ -35,7 +39,6 @@ public class LL {
 
         size ++ ;
     }
-
     public  void  display(){
         Node temp = head ;
         while (temp != null) {
@@ -44,7 +47,6 @@ public class LL {
         }
 
     }
-
     public  void  insertAt(int value , int idx){
         if (idx == 0){
             inserFrist(value);
@@ -69,7 +71,6 @@ public class LL {
         currentNode.next  = node ;
         size ++ ;
     }
-
     public  int deletFrist(){
         int value = head.value ;
         head = head.next ;
@@ -78,7 +79,6 @@ public class LL {
         size--;
         return value ;
     }
-
     public  int deletAt(int idx){
         Node  currentNode = head ;
         for (int i = 1; i < idx; i++)
@@ -87,7 +87,6 @@ public class LL {
         currentNode.next = currentNode.next.next;
         return  value;
     }
-
     public  int deletLast(){
         Node  currentNode = head ;
         for (int i = 1; i < size-2; i++)
@@ -97,7 +96,6 @@ public class LL {
         size--;
         return  tail.value;
     }
-
     public  Node find(int value){
         Node  currentNode = head ;
         while (currentNode != null){
@@ -108,15 +106,27 @@ public class LL {
         }
         return  null;
     }
+    public  void  insertRecu(int idx , int val){
+        head = insertRecu(idx , val , head );
+    }
+    private Node insertRecu(int idx , int val , Node node ){
+        if(idx ==0 ){
+            Node temp = new Node(val ,node);
+            size++;
+            return  temp;
+        }
+        node.next= insertRecu(idx-1 ,  val , node.next);
+        return node;
+    }
 
-    private  class  Node{
-        private  int value ;
+    protected class  Node{
+
+        protected   int value ;
         Node next ;
 
         public  Node(int value){
             this.value = value ;
         }
-
         public  Node(int value , Node  next){
             this.value = value ;
             this.next = next ;

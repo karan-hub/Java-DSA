@@ -3,6 +3,10 @@ package LinkList;
 public class DLL {
     Node head ;
 
+    public  DLL(){
+        this.head=null;
+    }
+
     public  void  insertFrist(int value){
         Node node = new Node(value);
         node.next= head;
