@@ -92,7 +92,7 @@ public class MargeSort {
             k++;
         }
 
-        System.arraycopy(mix, 0, arr, 0 + start, mix.length);
+        System.arraycopy(mix, 0, arr, start, mix.length);
 //        for (int l = 0; l < mix.length; l++) {
 //            arr[l+start]  = mix[l];
 //        }

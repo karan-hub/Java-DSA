@@ -109,6 +109,7 @@ public class LL {
     public  void  insertRecu(int idx , int val){
         head = insertRecu(idx , val , head );
     }
+
     private Node insertRecu(int idx , int val , Node node ){
         if(idx ==0 ){
             Node temp = new Node(val ,node);
