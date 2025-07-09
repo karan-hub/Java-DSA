@@ -22,7 +22,6 @@ public class ReverseList {
 
     }
 
-
     public ListNode  reverce(ListNode head){
         if (head == null || head.next == null ) return  head ;
         ListNode prev = null;
@@ -40,6 +39,7 @@ public class ReverseList {
         return prev;
 
     }
+
     public static void main(String[] args) {
         ReverseList obj = new ReverseList();
 
@@ -54,5 +54,30 @@ public class ReverseList {
             reversed = reversed.next;
         }
         System.out.println("null");
+    }
+
+    public ListNode reverseBetween(ListNode head, int left, int right) {
+        if (head == null || head.next == null || left == right) return head;
+        ListNode prev =  null;
+        ListNode curr =  head ;
+        for (int i =0 ; curr !=  null && i < left-1 ;i++){
+            prev = curr ;
+            curr =curr.next;
+        }
+        ListNode newEnd = curr;
+        ListNode next = curr.next;
+        ListNode temp = null;
+        for ( int i = 0 ; i < right-left+1 ; i++){
+            curr.next = temp;
+            temp =curr;
+            curr = next;
+            if (next != null){
+                next = next.next;
+            }
+        }
+        prev.next =temp;
+        newEnd.next =curr;
+
+        return head ;
     }
 }
