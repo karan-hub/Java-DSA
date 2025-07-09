@@ -22,6 +22,24 @@ public class ReverseList {
 
     }
 
+
+    public ListNode  reverce(ListNode head){
+        if (head == null || head.next == null ) return  head ;
+        ListNode prev = null;
+        ListNode present = head;
+        ListNode next = present.next;
+
+        while (present != null) {
+            present.next = prev;
+            prev = present;
+            present = next;
+            if (next != null) {
+                next = next.next;
+            }
+        }
+        return prev;
+
+    }
     public static void main(String[] args) {
         ReverseList obj = new ReverseList();
 
@@ -29,7 +47,7 @@ public class ReverseList {
         head.next = new ListNode(2);
         head.next.next = new ListNode(3);
 
-        ListNode reversed = obj.reverseList(head);
+        ListNode reversed = obj.reverce(head);
 
         while (reversed != null) {
             System.out.print(reversed.val + " -> ");
