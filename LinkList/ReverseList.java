@@ -48,15 +48,23 @@ public class ReverseList {
         head.next.next = new ListNode(3);
 
         ListNode reversed = obj.reverce(head);
+//    printList(reversed);
 
-        while (reversed != null) {
-            System.out.print(reversed.val + " -> ");
-            reversed = reversed.next;
+
+        ListNode head5 = buildList(new int[]{1, 2, 2,1});
+        head5 = reverseBetween(head5, 3, 4);
+        printList(head5);
+    }
+
+    private static void printList(ListNode head) {
+        while (head != null) {
+            System.out.print(head.val + " -> ");
+            head = head.next;
         }
         System.out.println("null");
     }
 
-    public ListNode reverseBetween(ListNode head, int left, int right) {
+    public static ListNode reverseBetween(ListNode head, int left, int right) {
         if (head == null || head.next == null || left == right) return head;
         ListNode prev =  null;
         ListNode curr =  head ;
@@ -75,9 +83,25 @@ public class ReverseList {
                 next = next.next;
             }
         }
-        prev.next =temp;
-        newEnd.next =curr;
+        if (prev != null) {
+            prev.next = temp;
+        } else {
+            head = temp;
+        }
+
+        newEnd.next = curr;
+
 
         return head ;
+    }
+
+    public static ListNode buildList(int[] vals) {
+        ListNode dummy = new ListNode(0);
+        ListNode curr = dummy;
+        for (int val : vals) {
+            curr.next = new ListNode(val);
+            curr = curr.next;
+        }
+        return dummy.next;
     }
 }
