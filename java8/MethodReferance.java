@@ -9,7 +9,7 @@ public class MethodReferance {
         Greeter greeter = new Greeter();
 
         // Instead of:
-        Consumer<String> c = name -> greeter.greet(name);
+        Consumer<String> c = name->  greeter.greet(name);
 
         // Do:
         Consumer<String> c2 = greeter::greet;
@@ -18,8 +18,12 @@ public class MethodReferance {
     }
 }
 
+
+
 class Greeter {
     public void greet(String name) {
-        System::println("Hello, " + name);
+        Consumer<String> print= System.out::println;
+        print.accept("karan");
+
     }
 }

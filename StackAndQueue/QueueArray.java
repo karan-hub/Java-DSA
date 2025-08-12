@@ -1,6 +1,4 @@
-package Stack_And_Queue;
-
-import java.util.Queue;
+package StackAndQueue;
 
 public class QueueArray<T> {
     Object [] queue;

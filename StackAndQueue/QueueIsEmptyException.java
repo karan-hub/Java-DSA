@@ -1,4 +1,4 @@
-package Stack_And_Queue;
+package StackAndQueue;
 
 public class QueueIsEmptyException extends RuntimeException {
     public QueueIsEmptyException() {

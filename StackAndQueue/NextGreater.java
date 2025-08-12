@@ -1,4 +1,4 @@
-package Stack_And_Queue;
+package StackAndQueue;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,24 +20,20 @@ public class NextGreater {
         return  nge;
     }
 
-    public int[] nextGreaterElement2(int[] nums1, int[] nums2) {
+    public static int[] nextGreaterElement2(int[] nums1, int[] nums2) {
         Map<Integer, Integer> ngeMap = new HashMap<>();
-
         Stack<Integer> stack = new Stack<>();
-
 
         for (int i = nums2.length - 1; i >= 0; i--) {
             int num = nums2[i];
 
-            while (!stack.isEmpty() && stack.peek() <= num) {
+            while (!stack.isEmpty() && stack.peek() <= num)
                 stack.pop();
-            }
 
-            if (stack.isEmpty()) {
+            if (stack.isEmpty())
                 ngeMap.put(num, -1);
-            } else {
+            else
                 ngeMap.put(num, stack.peek());
-            }
 
             stack.push(num);
         }
@@ -50,5 +46,6 @@ public class NextGreater {
 
         return result;
     }
+
 
 }

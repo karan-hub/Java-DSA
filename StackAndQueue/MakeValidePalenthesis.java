@@ -1,19 +1,18 @@
-package Stack_And_Queue;
+package StackAndQueue;
 
 import java.util.Stack;
 
-public class PalenthesisValid {
+public class MakeValidePalenthesis {
     Stack<Character> palenthis = new Stack<>();
 
-    public  boolean  check(String str){
+    public  int  check(String str){
         for (char ch: str.toCharArray()){
             if (ch == '(' || ch == '{' || ch =='[' )
                 palenthis.push(ch);
             else
-                if (palenthis.isEmpty()) return  false;
-                else palenthis.pop();
+            if (palenthis.isEmpty()) return  0;
+            else palenthis.pop();
         }
-        return  true;
+        return  palenthis.size();
     }
-
 }

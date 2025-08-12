@@ -1,4 +1,4 @@
-package Stack_And_Queue;
+package StackAndQueue;
 public class MainStack {
     public static void main(String[] args) {
         ArrayStack<String> stack = new ArrayStack<>(3);
