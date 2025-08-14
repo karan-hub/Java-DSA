@@ -5,7 +5,7 @@ import java.util.Stack;
 
 public class asteroidCollision {
     public static void main(String[] args) {
-        int [] arr = Solution(new int[]{});
+        int [] arr = Solution(new int[]{-2,-2,-1,-2});
         System.out.println(Arrays.toString(arr));
 
     }
@@ -17,15 +17,16 @@ public class asteroidCollision {
             else {
                 while (!stack.isEmpty() && stack.peek() >= 0 && stack.peek() < Math.abs(arr[i]))
                     stack.pop();
-                if (!stack.isEmpty() && stack.peek() == arr[i])
+                if (!stack.isEmpty() && stack.peek() == Math.abs(arr[i]))
                     stack.pop();
-                else if (stack.isEmpty() || stack.peek() < arr[i])
+                else if (stack.isEmpty() || stack.peek() <= arr[i] || stack.peek() < 0 && stack.peek()> arr[i])
                     stack.push(arr[i]);
             }
         }
         int[] resultArray = new int[stack.size()];
+
         for (int i = 0; i < resultArray.length; i++) {
-            resultArray[i] = stack.pop(); // removes and stores
+            resultArray[i] = stack.get(i); // removes and stores
         }
         return resultArray;
 
