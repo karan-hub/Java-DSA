@@ -1,6 +1,5 @@
-package java8;
+package java8.Consumer;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.BiConsumer;
@@ -12,9 +11,10 @@ public class ConsumerEx {
         Consumer<List<String>> print = x ->{
             for (String nm:x)  System.out.println(nm);
         };
+
         print.accept(students);
 
-        Consumer<String> greet = name -> System.out.println("Hello " + name);
+        Consumer<String> greet = System.out::println;
         Consumer<String> bye = name -> System.out.println("Goodbye " + name);
 
         Consumer<String> combo = greet.andThen(bye);

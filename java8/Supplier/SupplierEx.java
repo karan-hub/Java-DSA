@@ -1,4 +1,4 @@
-package java8;
+package java8.Supplier;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

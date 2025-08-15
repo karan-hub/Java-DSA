@@ -1,6 +1,5 @@
-package java8;
+package java8.Predicate;
 
-import java.util.PrimitiveIterator;
 import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 
@@ -28,7 +27,6 @@ public static void main(String[] args) {
 //BiPredicate
     BiPredicate<Integer, Integer> isSumGreaterThan100 = (a, b) -> (a + b) > 100;
     System.out.println(isSumGreaterThan100.test(60, 45));  // true
-
 
 }
 }

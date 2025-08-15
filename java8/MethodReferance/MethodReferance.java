@@ -1,4 +1,4 @@
-package java8;
+package java8.MethodReferance;
 
 import java.util.function.Consumer;
 

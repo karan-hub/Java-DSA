@@ -1,4 +1,4 @@
-package java8.Execercise.Lambda.Questions;
+package java8.Lambda.Questions;
 
 import java.util.function.Function;
 
