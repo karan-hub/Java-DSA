@@ -1,6 +1,5 @@
 package BinaryTrees;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class BST<T extends  Comparable<T> > {
@@ -33,6 +32,11 @@ public class BST<T extends  Comparable<T> > {
         System.out.println("please Enter Root");
         Integer value = scanner.nextInt();
         root = insert((T) value, root);
+    }
+
+    public void insert(T element ){
+
+        root = insert( element, root);
     }
 
     public  Node<T> insert(T value , Node node){

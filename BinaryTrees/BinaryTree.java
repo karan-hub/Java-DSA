@@ -3,10 +3,8 @@ package BinaryTrees;
 import java.util.Scanner;
 
 public class BinaryTree {
-
-
-    private  class  Node{
-        private int value;
+    private static class  Node{
+        private final int value;
         private Node right;
         private Node left;
         Node(int value){
@@ -18,7 +16,12 @@ public class BinaryTree {
     }
 
     private  Node root;
-//    insert
+
+    public int getRoot() {
+        return root.value;
+    }
+
+    //    insert
     public void populate(Scanner scanner){
         System.out.println("Enter the root Node");
         int val = scanner.nextInt();
@@ -27,7 +30,7 @@ public class BinaryTree {
     }
 
     public void populate(Scanner scanner , Node node){
-        System.out.println("Do u want to add element left to the"+ node.value);
+        System.out.println("Do u want to add element left to the "+ node.value);
         boolean left= scanner.nextBoolean();
         if (left){
             System.out.println("Enter the value of the left of " + node.value);
@@ -51,11 +54,10 @@ public class BinaryTree {
         System.out.println("which order You Want \n prees 1 - PreOrder \n prees 2 - InOrder \n prees 3 - PostOrder");
         int choice = scanner.nextInt();
         switch (choice){
-            case 1 : preOrder(this.root);
-            case 2 : inOrder(this.root);
-            case 3 : postOrder(this.root);
-            default:
-                System.out.println("Invalid Entry For " + choice);;
+            case 1 -> preOrder(this.root);
+            case 2 -> inOrder(this.root);
+            case 3 -> postOrder(this.root);
+            default-> System.out.println("Invalid Entry For " + choice);
         }
     }
 
