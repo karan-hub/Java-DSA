@@ -77,6 +77,24 @@ public class BST<T extends  Comparable<T> > {
         }
     }
 
+
+    public     int heightOfTree(Node root){
+        return  helper(root );
+    }
+    private int helper(Node root) {
+        if (root == null) return -1; // base case: empty tree height = -1
+        int leftHeight = helper(root.left);
+//        System.out.println("leftHeight " + leftHeight);
+        int rightHeight = helper(root.right);
+//        System.out.println("rightHeight  "+ rightHeight +" leftHeight" + leftHeight +" total ->  " + (1 + Math.max(leftHeight, rightHeight))+"\n");
+        return 1 + Math.max(leftHeight, rightHeight);
+    }
+
+    public int countNodes(Node root) {
+        if (root == null) return 0;
+        return 1 + countNodes(root.left) + countNodes(root.right);
+    }
+
     public static void main(String[] args) {
         BST<Integer>  bst = new BST<>();
         Scanner scanner = new Scanner(System.in);
