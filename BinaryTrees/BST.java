@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class BST<T extends  Comparable<T> > {
 
-
     private  static  class  Node<T>{
          private final T value ;
          private  Node<T> left;
@@ -35,16 +34,22 @@ public class BST<T extends  Comparable<T> > {
     }
 
     public void insert(T element ){
-
         root = insert( element, root);
     }
 
     public  Node<T> insert(T value , Node node){
+
         if (node==null) return new Node<>(value);
-        if (value.compareTo((T) node.getValue()) <0) node.left = insert(value , node.left);
-        if (value.compareTo((T)node.getValue())>0) node.right = insert(value , node.right);
-        return node;
+
+        if (value.compareTo((T) node.getValue()) <0)
+            node.left = insert(value , node.left);
+
+        if (value.compareTo((T)node.getValue())>0)
+            node.right = insert(value , node.right);
+
+        return  node;
     }
+
     private  void Inorder(Node<T> node ,  String indent){
         if (node == null )return;
         Inorder(node.left , indent+"\t");
@@ -77,16 +82,13 @@ public class BST<T extends  Comparable<T> > {
         }
     }
 
-
-    public     int heightOfTree(Node root){
+    public int heightOfTree(Node root){
         return  helper(root );
     }
     private int helper(Node root) {
-        if (root == null) return -1; // base case: empty tree height = -1
+        if (root == null) return -1;
         int leftHeight = helper(root.left);
-//        System.out.println("leftHeight " + leftHeight);
         int rightHeight = helper(root.right);
-//        System.out.println("rightHeight  "+ rightHeight +" leftHeight" + leftHeight +" total ->  " + (1 + Math.max(leftHeight, rightHeight))+"\n");
         return 1 + Math.max(leftHeight, rightHeight);
     }
 

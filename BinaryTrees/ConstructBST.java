@@ -9,7 +9,7 @@ public class ConstructBST {
     static  BST<Integer> bst = new BST<>();
    static public void populatedSorted(int[] nums , int start , int end) {
 
-       if (start >= end)return;
+       if (start >= end) return;
        int mid = (start+end)/2;
        bst.insert(nums[mid]);
        populatedSorted(nums,start , mid);
