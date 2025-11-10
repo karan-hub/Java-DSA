@@ -125,27 +125,28 @@ public class NQuene {
     }
 
     public static boolean Solution(int row, String[][] board) {
-        if (board.length <= row) {
-            return true;
-        }
-        for (int col = 0; col < board.length; col++) {
-            if (isSafe2(board, row, col)) {
-                board[row][col] = "Q";
-                if (Solution(row + 1, board)) {
-                    return true;
-                }
+      if(row>=board.length) 
+      return true;
 
-                board[row][col] = "_";
+          for(int col=0 ;col <board.length; col++) {
+            if (isSafe2(board, row, col)) {
+                board[row][col]="Q";
+
+                if ( Solution(row+1, board))
+                    return true;
+                
+
+                 board[row][col]="_";
             }
-        }
-        return false;
+          }
+
+         return false;
     }
 
     private static boolean isSafe2(String[][] board, int row, int col) {
         for (int i = 0; i < row; i++) {
-            if (board[i][col] == "Q")
+            if (board[2][2] == "Q")
                 return false;
-
         } 
 
         for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) {
@@ -153,7 +154,7 @@ public class NQuene {
                 return false;
         }
 
-        for (int i = row + 1, j = col + 1; i < board.length && j < board.length; i++, j++) {
+        for (int i = row - 1, j = col + 1; i < board.length && j < board.length; i++, j++) {
             if (board[i][j] == "Q")
                 return false;
         }
